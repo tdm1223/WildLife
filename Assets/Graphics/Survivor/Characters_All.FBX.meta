@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 18983a4800b37964c8a325464e6a43cd
+timeCreated: 1501858421
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle_L
+    100002: Ankle_R
+    100004: Ball_L
+    100006: Ball_R
+    100008: Be_UmbrellaArm_A_04
+    100010: Be_UmbrellaArm_B_04
+    100012: Be_UmbrellaArm_C_04
+    100014: Be_UmbrellaArm_D_04
+    100016: Be_UmbrellaArm_E_04
+    100018: Be_UmbrellaArm_F_04
+    100020: Be_UmbrellaArm_G_04
+    100022: Be_UmbrellaArm_H_04
+    100024: Bip001
+    100026: Bip001 Footsteps
+    100028: Bip001 Head
+    100030: Bip001 HeadNub
+    100032: Bip001 L Calf
+    100034: Bip001 L Clavicle
+    100036: Bip001 L Finger0
+    100038: Bip001 L Finger01
+    100040: Bip001 L Finger0Nub
+    100042: Bip001 L Finger1
+    100044: Bip001 L Finger11
+    100046: Bip001 L Finger1Nub
+    100048: Bip001 L Finger2
+    100050: Bip001 L Finger21
+    100052: Bip001 L Finger2Nub
+    100054: Bip001 L Foot
+    100056: Bip001 L Forearm
+    100058: Bip001 L Hand
+    100060: Bip001 L Thigh
+    100062: Bip001 L Toe0
+    100064: Bip001 L Toe0Nub
+    100066: Bip001 L UpperArm
+    100068: Bip001 Neck
+    100070: Bip001 Pelvis
+    100072: Bip001 R Calf
+    100074: Bip001 R Clavicle
+    100076: Bip001 R Finger0
+    100078: Bip001 R Finger01
+    100080: Bip001 R Finger0Nub
+    100082: Bip001 R Finger1
+    100084: Bip001 R Finger11
+    100086: Bip001 R Finger1Nub
+    100088: Bip001 R Finger2
+    100090: Bip001 R Finger21
+    100092: Bip001 R Finger2Nub
+    100094: Bip001 R Foot
+    100096: Bip001 R Forearm
+    100098: Bip001 R Hand
+    100100: Bip001 R Thigh
+    100102: Bip001 R Toe0
+    100104: Bip001 R Toe0Nub
+    100106: Bip001 R UpperArm
+    100108: Bip001 Spine
+    100110: Bip001 Spine1
+    100112: Bip001 Spine2
+    100114: Bn_UmbrellaArm_A_01
+    100116: Bn_UmbrellaArm_A_02
+    100118: Bn_UmbrellaArm_A_03
+    100120: Bn_UmbrellaArm_A_04
+    100122: Bn_UmbrellaArm_B_01
+    100124: Bn_UmbrellaArm_B_02
+    100126: Bn_UmbrellaArm_B_03
+    100128: Bn_UmbrellaArm_B_04
+    100130: Bn_UmbrellaArm_C_01
+    100132: Bn_UmbrellaArm_C_02
+    100134: Bn_UmbrellaArm_C_03
+    100136: Bn_UmbrellaArm_C_04
+    100138: Bn_UmbrellaArm_D_01
+    100140: Bn_UmbrellaArm_D_02
+    100142: Bn_UmbrellaArm_D_03
+    100144: Bn_UmbrellaArm_D_04
+    100146: Bn_UmbrellaArm_E_01
+    100148: Bn_UmbrellaArm_E_02
+    100150: Bn_UmbrellaArm_E_03
+    100152: Bn_UmbrellaArm_E_04
+    100154: Bn_UmbrellaArm_F_01
+    100156: Bn_UmbrellaArm_F_02
+    100158: Bn_UmbrellaArm_F_03
+    100160: Bn_UmbrellaArm_F_04
+    100162: Bn_UmbrellaArm_G_01
+    100164: Bn_UmbrellaArm_G_02
+    100166: Bn_UmbrellaArm_G_03
+    100168: Bn_UmbrellaArm_G_04
+    100170: Bn_UmbrellaArm_H_01
+    100172: Bn_UmbrellaArm_H_02
+    100174: Bn_UmbrellaArm_H_03
+    100176: Bn_UmbrellaArm_H_04
+    100178: Bone002
+    100180: Character_Knight
+    100182: Character_Peasant
+    100184: Character_Shopkeeper
+    100186: Character_Viking
+    100188: Character_Warrior
+    100190: //RootNode
+    100192: Clavicle_L
+    100194: Clavicle_R
+    100196: connectBone001
+    100198: connectBone002
+    100200: connectBone003
+    100202: connectBone004
+    100204: connectBone005
+    100206: connectBone006
+    100208: connectBone007
+    100210: connectBone008
+    100212: Elbow_L
+    100214: Elbow_R
+    100216: Eyebrows
+    100218: Eyes
+    100220: Finger_01
+    100222: Finger_01 1
+    100224: Finger_02
+    100226: Finger_02 1
+    100228: Finger_03
+    100230: Finger_03 1
+    100232: Finger_04
+    100234: Finger_04 1
+    100236: Hand_L
+    100238: Hand_R
+    100240: Head
+    100242: Hips
+    100244: IndexFinger_01
+    100246: IndexFinger_01 1
+    100248: IndexFinger_02
+    100250: IndexFinger_02 1
+    100252: IndexFinger_03
+    100254: IndexFinger_03 1
+    100256: IndexFinger_04
+    100258: IndexFinger_04 1
+    100260: Item_CoinBag
+    100262: Item_Dagger
+    100264: Item_Pouch
+    100266: Item_Sword
+    100268: Item_SwordHolder
+    100270: Item_SwordSheath
+    100272: Item_WarriorSholderArmor
+    100274: Item_WarriorSholderArmor 1
+    100276: Item_WaterBladder_01
+    100278: Item_WaterCanteen
+    100280: LowerLeg_L
+    100282: LowerLeg_R
+    100284: Neck
+    100286: Root
+    100288: RootBone
+    100290: Shoulder_L
+    100292: Shoulder_R
+    100294: Spine_01
+    100296: Spine_02
+    100298: Spine_03
+    100300: Thumb_01
+    100302: Thumb_01 1
+    100304: Thumb_02
+    100306: Thumb_02 1
+    100308: Thumb_03
+    100310: Thumb_03 1
+    100312: Toes_L
+    100314: Toes_R
+    100316: UpperLeg_L
+    100318: UpperLeg_R
+    100320: "\uD5C8\uB9AC\uC791\uC740\uAC00\uBC292"
+    400000: Ankle_L
+    400002: Ankle_R
+    400004: Ball_L
+    400006: Ball_R
+    400008: Be_UmbrellaArm_A_04
+    400010: Be_UmbrellaArm_B_04
+    400012: Be_UmbrellaArm_C_04
+    400014: Be_UmbrellaArm_D_04
+    400016: Be_UmbrellaArm_E_04
+    400018: Be_UmbrellaArm_F_04
+    400020: Be_UmbrellaArm_G_04
+    400022: Be_UmbrellaArm_H_04
+    400024: Bip001
+    400026: Bip001 Footsteps
+    400028: Bip001 Head
+    400030: Bip001 HeadNub
+    400032: Bip001 L Calf
+    400034: Bip001 L Clavicle
+    400036: Bip001 L Finger0
+    400038: Bip001 L Finger01
+    400040: Bip001 L Finger0Nub
+    400042: Bip001 L Finger1
+    400044: Bip001 L Finger11
+    400046: Bip001 L Finger1Nub
+    400048: Bip001 L Finger2
+    400050: Bip001 L Finger21
+    400052: Bip001 L Finger2Nub
+    400054: Bip001 L Foot
+    400056: Bip001 L Forearm
+    400058: Bip001 L Hand
+    400060: Bip001 L Thigh
+    400062: Bip001 L Toe0
+    400064: Bip001 L Toe0Nub
+    400066: Bip001 L UpperArm
+    400068: Bip001 Neck
+    400070: Bip001 Pelvis
+    400072: Bip001 R Calf
+    400074: Bip001 R Clavicle
+    400076: Bip001 R Finger0
+    400078: Bip001 R Finger01
+    400080: Bip001 R Finger0Nub
+    400082: Bip001 R Finger1
+    400084: Bip001 R Finger11
+    400086: Bip001 R Finger1Nub
+    400088: Bip001 R Finger2
+    400090: Bip001 R Finger21
+    400092: Bip001 R Finger2Nub
+    400094: Bip001 R Foot
+    400096: Bip001 R Forearm
+    400098: Bip001 R Hand
+    400100: Bip001 R Thigh
+    400102: Bip001 R Toe0
+    400104: Bip001 R Toe0Nub
+    400106: Bip001 R UpperArm
+    400108: Bip001 Spine
+    400110: Bip001 Spine1
+    400112: Bip001 Spine2
+    400114: Bn_UmbrellaArm_A_01
+    400116: Bn_UmbrellaArm_A_02
+    400118: Bn_UmbrellaArm_A_03
+    400120: Bn_UmbrellaArm_A_04
+    400122: Bn_UmbrellaArm_B_01
+    400124: Bn_UmbrellaArm_B_02
+    400126: Bn_UmbrellaArm_B_03
+    400128: Bn_UmbrellaArm_B_04
+    400130: Bn_UmbrellaArm_C_01
+    400132: Bn_UmbrellaArm_C_02
+    400134: Bn_UmbrellaArm_C_03
+    400136: Bn_UmbrellaArm_C_04
+    400138: Bn_UmbrellaArm_D_01
+    400140: Bn_UmbrellaArm_D_02
+    400142: Bn_UmbrellaArm_D_03
+    400144: Bn_UmbrellaArm_D_04
+    400146: Bn_UmbrellaArm_E_01
+    400148: Bn_UmbrellaArm_E_02
+    400150: Bn_UmbrellaArm_E_03
+    400152: Bn_UmbrellaArm_E_04
+    400154: Bn_UmbrellaArm_F_01
+    400156: Bn_UmbrellaArm_F_02
+    400158: Bn_UmbrellaArm_F_03
+    400160: Bn_UmbrellaArm_F_04
+    400162: Bn_UmbrellaArm_G_01
+    400164: Bn_UmbrellaArm_G_02
+    400166: Bn_UmbrellaArm_G_03
+    400168: Bn_UmbrellaArm_G_04
+    400170: Bn_UmbrellaArm_H_01
+    400172: Bn_UmbrellaArm_H_02
+    400174: Bn_UmbrellaArm_H_03
+    400176: Bn_UmbrellaArm_H_04
+    400178: Bone002
+    400180: Character_Knight
+    400182: Character_Peasant
+    400184: Character_Shopkeeper
+    400186: Character_Viking
+    400188: Character_Warrior
+    400190: //RootNode
+    400192: Clavicle_L
+    400194: Clavicle_R
+    400196: connectBone001
+    400198: connectBone002
+    400200: connectBone003
+    400202: connectBone004
+    400204: connectBone005
+    400206: connectBone006
+    400208: connectBone007
+    400210: connectBone008
+    400212: Elbow_L
+    400214: Elbow_R
+    400216: Eyebrows
+    400218: Eyes
+    400220: Finger_01
+    400222: Finger_01 1
+    400224: Finger_02
+    400226: Finger_02 1
+    400228: Finger_03
+    400230: Finger_03 1
+    400232: Finger_04
+    400234: Finger_04 1
+    400236: Hand_L
+    400238: Hand_R
+    400240: Head
+    400242: Hips
+    400244: IndexFinger_01
+    400246: IndexFinger_01 1
+    400248: IndexFinger_02
+    400250: IndexFinger_02 1
+    400252: IndexFinger_03
+    400254: IndexFinger_03 1
+    400256: IndexFinger_04
+    400258: IndexFinger_04 1
+    400260: Item_CoinBag
+    400262: Item_Dagger
+    400264: Item_Pouch
+    400266: Item_Sword
+    400268: Item_SwordHolder
+    400270: Item_SwordSheath
+    400272: Item_WarriorSholderArmor
+    400274: Item_WarriorSholderArmor 1
+    400276: Item_WaterBladder_01
+    400278: Item_WaterCanteen
+    400280: LowerLeg_L
+    400282: LowerLeg_R
+    400284: Neck
+    400286: Root
+    400288: RootBone
+    400290: Shoulder_L
+    400292: Shoulder_R
+    400294: Spine_01
+    400296: Spine_02
+    400298: Spine_03
+    400300: Thumb_01
+    400302: Thumb_01 1
+    400304: Thumb_02
+    400306: Thumb_02 1
+    400308: Thumb_03
+    400310: Thumb_03 1
+    400312: Toes_L
+    400314: Toes_R
+    400316: UpperLeg_L
+    400318: UpperLeg_R
+    400320: "\uD5C8\uB9AC\uC791\uC740\uAC00\uBC292"
+    2300000: Item_CoinBag
+    2300002: Item_Dagger
+    2300004: Item_Pouch
+    2300006: Item_Sword
+    2300008: Item_SwordHolder
+    2300010: Item_SwordSheath
+    2300012: Item_WarriorSholderArmor
+    2300014: Item_WarriorSholderArmor 1
+    2300016: Item_WaterBladder_01
+    2300018: Item_WaterCanteen
+    2300020: "\uD5C8\uB9AC\uC791\uC740\uAC00\uBC292"
+    3300000: Item_CoinBag
+    3300002: Item_Dagger
+    3300004: Item_Pouch
+    3300006: Item_Sword
+    3300008: Item_SwordHolder
+    3300010: Item_SwordSheath
+    3300012: Item_WarriorSholderArmor
+    3300014: Item_WarriorSholderArmor 1
+    3300016: Item_WaterBladder_01
+    3300018: Item_WaterCanteen
+    3300020: "\uD5C8\uB9AC\uC791\uC740\uAC00\uBC292"
+    4300000: Item_WarriorSholderArmor
+    4300002: Item_WarriorSholderArmor
+    4300004: Item_Sword
+    4300006: Item_SwordHolder
+    4300008: Item_WaterCanteen
+    4300010: Item_WaterBladder_01
+    4300012: Item_Pouch
+    4300014: Item_SwordSheath
+    4300016: Item_Dagger
+    4300018: Item_CoinBag
+    4300020: Character_Warrior
+    4300022: Character_Peasant
+    4300024: Character_Knight
+    4300026: Character_Viking
+    4300028: Character_Shopkeeper
+    4300030: "\uD5C8\uB9AC\uC791\uC740\uAC00\uBC292"
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Character_Knight
+    13700002: Character_Peasant
+    13700004: Character_Shopkeeper
+    13700006: Character_Viking
+    13700008: Character_Warrior
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

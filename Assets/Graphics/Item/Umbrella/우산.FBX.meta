@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: d58e47b8980f96b47a846302402b85c0
+timeCreated: 1499275792
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Be_UmbrellaArm_A_04
+    100002: Be_UmbrellaArm_B_04
+    100004: Be_UmbrellaArm_C_04
+    100006: Be_UmbrellaArm_D_04
+    100008: Be_UmbrellaArm_E_04
+    100010: Be_UmbrellaArm_F_04
+    100012: Be_UmbrellaArm_G_04
+    100014: Be_UmbrellaArm_H_04
+    100016: Bn_UmbrellaArm_A_01
+    100018: Bn_UmbrellaArm_A_02
+    100020: Bn_UmbrellaArm_A_03
+    100022: Bn_UmbrellaArm_A_04
+    100024: Bn_UmbrellaArm_B_01
+    100026: Bn_UmbrellaArm_B_02
+    100028: Bn_UmbrellaArm_B_03
+    100030: Bn_UmbrellaArm_B_04
+    100032: Bn_UmbrellaArm_C_01
+    100034: Bn_UmbrellaArm_C_02
+    100036: Bn_UmbrellaArm_C_03
+    100038: Bn_UmbrellaArm_C_04
+    100040: Bn_UmbrellaArm_D_01
+    100042: Bn_UmbrellaArm_D_02
+    100044: Bn_UmbrellaArm_D_03
+    100046: Bn_UmbrellaArm_D_04
+    100048: Bn_UmbrellaArm_E_01
+    100050: Bn_UmbrellaArm_E_02
+    100052: Bn_UmbrellaArm_E_03
+    100054: Bn_UmbrellaArm_E_04
+    100056: Bn_UmbrellaArm_F_01
+    100058: Bn_UmbrellaArm_F_02
+    100060: Bn_UmbrellaArm_F_03
+    100062: Bn_UmbrellaArm_F_04
+    100064: Bn_UmbrellaArm_G_01
+    100066: Bn_UmbrellaArm_G_02
+    100068: Bn_UmbrellaArm_G_03
+    100070: Bn_UmbrellaArm_G_04
+    100072: Bn_UmbrellaArm_H_01
+    100074: Bn_UmbrellaArm_H_02
+    100076: Bn_UmbrellaArm_H_03
+    100078: Bn_UmbrellaArm_H_04
+    100080: Bone001
+    100082: Bone002
+    100084: connectBone001
+    100086: connectBone002
+    100088: connectBone003
+    100090: connectBone004
+    100092: connectBone005
+    100094: connectBone006
+    100096: connectBone007
+    100098: connectBone008
+    100100: Object
+    100102: //RootNode
+    400000: Be_UmbrellaArm_A_04
+    400002: Be_UmbrellaArm_B_04
+    400004: Be_UmbrellaArm_C_04
+    400006: Be_UmbrellaArm_D_04
+    400008: Be_UmbrellaArm_E_04
+    400010: Be_UmbrellaArm_F_04
+    400012: Be_UmbrellaArm_G_04
+    400014: Be_UmbrellaArm_H_04
+    400016: Bn_UmbrellaArm_A_01
+    400018: Bn_UmbrellaArm_A_02
+    400020: Bn_UmbrellaArm_A_03
+    400022: Bn_UmbrellaArm_A_04
+    400024: Bn_UmbrellaArm_B_01
+    400026: Bn_UmbrellaArm_B_02
+    400028: Bn_UmbrellaArm_B_03
+    400030: Bn_UmbrellaArm_B_04
+    400032: Bn_UmbrellaArm_C_01
+    400034: Bn_UmbrellaArm_C_02
+    400036: Bn_UmbrellaArm_C_03
+    400038: Bn_UmbrellaArm_C_04
+    400040: Bn_UmbrellaArm_D_01
+    400042: Bn_UmbrellaArm_D_02
+    400044: Bn_UmbrellaArm_D_03
+    400046: Bn_UmbrellaArm_D_04
+    400048: Bn_UmbrellaArm_E_01
+    400050: Bn_UmbrellaArm_E_02
+    400052: Bn_UmbrellaArm_E_03
+    400054: Bn_UmbrellaArm_E_04
+    400056: Bn_UmbrellaArm_F_01
+    400058: Bn_UmbrellaArm_F_02
+    400060: Bn_UmbrellaArm_F_03
+    400062: Bn_UmbrellaArm_F_04
+    400064: Bn_UmbrellaArm_G_01
+    400066: Bn_UmbrellaArm_G_02
+    400068: Bn_UmbrellaArm_G_03
+    400070: Bn_UmbrellaArm_G_04
+    400072: Bn_UmbrellaArm_H_01
+    400074: Bn_UmbrellaArm_H_02
+    400076: Bn_UmbrellaArm_H_03
+    400078: Bn_UmbrellaArm_H_04
+    400080: Bone001
+    400082: Bone002
+    400084: connectBone001
+    400086: connectBone002
+    400088: connectBone003
+    400090: connectBone004
+    400092: connectBone005
+    400094: connectBone006
+    400096: connectBone007
+    400098: connectBone008
+    400100: Object
+    400102: //RootNode
+    4300000: Object
+    7400000: UmbrelleaOpen
+    7400002: UmbrelleaClose
+    9500000: //RootNode
+    13700000: Object
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: UmbrelleaOpen
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone001
+        weight: 1
+      - path: Bone001/Bone002
+        weight: 1
+      - path: Bone001/Bone002/connectBone001
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03/Bn_UmbrellaArm_E_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03/Bn_UmbrellaArm_E_04/Be_UmbrellaArm_E_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone002
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03/Bn_UmbrellaArm_F_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03/Bn_UmbrellaArm_F_04/Be_UmbrellaArm_F_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone003
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03/Bn_UmbrellaArm_G_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03/Bn_UmbrellaArm_G_04/Be_UmbrellaArm_G_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone004
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03/Bn_UmbrellaArm_H_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03/Bn_UmbrellaArm_H_04/Be_UmbrellaArm_H_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone005
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03/Bn_UmbrellaArm_A_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03/Bn_UmbrellaArm_A_04/Be_UmbrellaArm_A_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone006
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03/Bn_UmbrellaArm_B_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03/Bn_UmbrellaArm_B_04/Be_UmbrellaArm_B_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone007
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03/Bn_UmbrellaArm_C_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03/Bn_UmbrellaArm_C_04/Be_UmbrellaArm_C_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone008
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03/Bn_UmbrellaArm_D_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03/Bn_UmbrellaArm_D_04/Be_UmbrellaArm_D_04
+        weight: 1
+      - path: Object
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: UmbrelleaClose
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone001
+        weight: 1
+      - path: Bone001/Bone002
+        weight: 1
+      - path: Bone001/Bone002/connectBone001
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03/Bn_UmbrellaArm_E_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone001/Bn_UmbrellaArm_E_01/Bn_UmbrellaArm_E_02/Bn_UmbrellaArm_E_03/Bn_UmbrellaArm_E_04/Be_UmbrellaArm_E_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone002
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03/Bn_UmbrellaArm_F_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone002/Bn_UmbrellaArm_F_01/Bn_UmbrellaArm_F_02/Bn_UmbrellaArm_F_03/Bn_UmbrellaArm_F_04/Be_UmbrellaArm_F_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone003
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03/Bn_UmbrellaArm_G_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone003/Bn_UmbrellaArm_G_01/Bn_UmbrellaArm_G_02/Bn_UmbrellaArm_G_03/Bn_UmbrellaArm_G_04/Be_UmbrellaArm_G_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone004
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03/Bn_UmbrellaArm_H_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone004/Bn_UmbrellaArm_H_01/Bn_UmbrellaArm_H_02/Bn_UmbrellaArm_H_03/Bn_UmbrellaArm_H_04/Be_UmbrellaArm_H_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone005
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03/Bn_UmbrellaArm_A_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone005/Bn_UmbrellaArm_A_01/Bn_UmbrellaArm_A_02/Bn_UmbrellaArm_A_03/Bn_UmbrellaArm_A_04/Be_UmbrellaArm_A_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone006
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03/Bn_UmbrellaArm_B_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone006/Bn_UmbrellaArm_B_01/Bn_UmbrellaArm_B_02/Bn_UmbrellaArm_B_03/Bn_UmbrellaArm_B_04/Be_UmbrellaArm_B_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone007
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03/Bn_UmbrellaArm_C_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone007/Bn_UmbrellaArm_C_01/Bn_UmbrellaArm_C_02/Bn_UmbrellaArm_C_03/Bn_UmbrellaArm_C_04/Be_UmbrellaArm_C_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone008
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03/Bn_UmbrellaArm_D_04
+        weight: 1
+      - path: Bone001/Bone002/connectBone008/Bn_UmbrellaArm_D_01/Bn_UmbrellaArm_D_02/Bn_UmbrellaArm_D_03/Bn_UmbrellaArm_D_04/Be_UmbrellaArm_D_04
+        weight: 1
+      - path: Object
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: b1317f64a1f226b42898f4008c818e59
+timeCreated: 1494742293
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CowRig
+    100004: CowRig_Head_JawEndSHJnt
+    100006: CowRig_Head_JawSHJnt
+    100008: CowRig_Head_TopSHJnt
+    100010: CowRig_l_Clavicle_01_01SHJnt
+    100012: CowRig_l_Eye_01SHJnt
+    100014: CowRig_l_FrontLeg_AnkleSHJnt
+    100016: CowRig_l_FrontLeg_BallSHJnt
+    100018: CowRig_l_FrontLeg_HipSHJnt
+    100020: CowRig_l_FrontLeg_Knee1SHJnt
+    100022: CowRig_l_FrontLeg_Knee2SHJnt
+    100024: CowRig_l_FrontLeg_ToeSHJnt
+    100026: CowRig_l_HindLeg_AnkleSHJnt
+    100028: CowRig_l_HindLeg_BallSHJnt
+    100030: CowRig_l_HindLeg_HipSHJnt
+    100032: CowRig_l_HindLeg_Knee1SHJnt
+    100034: CowRig_l_HindLeg_Knee2SHJnt
+    100036: CowRig_l_HindLeg_ToeSHJnt
+    100038: CowRig_Neck_01SHJnt
+    100040: CowRig_Neck_02SHJnt
+    100042: CowRig_Neck_TopSHJnt
+    100044: CowRig_r_Clavicle_01_01SHJnt
+    100046: CowRig_r_Eye_01SHJnt
+    100048: CowRig_r_FrontLeg_AnkleSHJnt
+    100050: CowRig_r_FrontLeg_BallSHJnt
+    100052: CowRig_r_FrontLeg_HipSHJnt
+    100054: CowRig_r_FrontLeg_Knee1SHJnt
+    100056: CowRig_r_FrontLeg_Knee2SHJnt
+    100058: CowRig_r_FrontLeg_ToeSHJnt
+    100060: CowRig_r_HindLeg_AnkleSHJnt
+    100062: CowRig_r_HindLeg_BallSHJnt
+    100064: CowRig_r_HindLeg_HipSHJnt
+    100066: CowRig_r_HindLeg_Knee1SHJnt
+    100068: CowRig_r_HindLeg_Knee2SHJnt
+    100070: CowRig_r_HindLeg_ToeSHJnt
+    100072: CowRig_ROOTSHJnt
+    100074: CowRig_SHJntGrp
+    100076: CowRig_Spine_01SHJnt
+    100078: CowRig_Spine_02SHJnt
+    100080: CowRig_Spine_03SHJnt
+    100082: CowRig_Spine_TopSHJnt
+    100084: CowRig_Tail_01_01SHJnt
+    100086: CowRig_Tail_01_02SHJnt
+    100088: CowRig_Tail_01_03SHJnt
+    100090: CowRig_Tail_01_04SHJnt
+    100092: CowRig_Tail_01_05SHJnt
+    100094: SM_Bear_01
+    100096: SM_Bear_02
+    100098: SM_Bear_03
+    400000: //RootNode
+    400002: CowRig
+    400004: CowRig_Head_JawEndSHJnt
+    400006: CowRig_Head_JawSHJnt
+    400008: CowRig_Head_TopSHJnt
+    400010: CowRig_l_Clavicle_01_01SHJnt
+    400012: CowRig_l_Eye_01SHJnt
+    400014: CowRig_l_FrontLeg_AnkleSHJnt
+    400016: CowRig_l_FrontLeg_BallSHJnt
+    400018: CowRig_l_FrontLeg_HipSHJnt
+    400020: CowRig_l_FrontLeg_Knee1SHJnt
+    400022: CowRig_l_FrontLeg_Knee2SHJnt
+    400024: CowRig_l_FrontLeg_ToeSHJnt
+    400026: CowRig_l_HindLeg_AnkleSHJnt
+    400028: CowRig_l_HindLeg_BallSHJnt
+    400030: CowRig_l_HindLeg_HipSHJnt
+    400032: CowRig_l_HindLeg_Knee1SHJnt
+    400034: CowRig_l_HindLeg_Knee2SHJnt
+    400036: CowRig_l_HindLeg_ToeSHJnt
+    400038: CowRig_Neck_01SHJnt
+    400040: CowRig_Neck_02SHJnt
+    400042: CowRig_Neck_TopSHJnt
+    400044: CowRig_r_Clavicle_01_01SHJnt
+    400046: CowRig_r_Eye_01SHJnt
+    400048: CowRig_r_FrontLeg_AnkleSHJnt
+    400050: CowRig_r_FrontLeg_BallSHJnt
+    400052: CowRig_r_FrontLeg_HipSHJnt
+    400054: CowRig_r_FrontLeg_Knee1SHJnt
+    400056: CowRig_r_FrontLeg_Knee2SHJnt
+    400058: CowRig_r_FrontLeg_ToeSHJnt
+    400060: CowRig_r_HindLeg_AnkleSHJnt
+    400062: CowRig_r_HindLeg_BallSHJnt
+    400064: CowRig_r_HindLeg_HipSHJnt
+    400066: CowRig_r_HindLeg_Knee1SHJnt
+    400068: CowRig_r_HindLeg_Knee2SHJnt
+    400070: CowRig_r_HindLeg_ToeSHJnt
+    400072: CowRig_ROOTSHJnt
+    400074: CowRig_SHJntGrp
+    400076: CowRig_Spine_01SHJnt
+    400078: CowRig_Spine_02SHJnt
+    400080: CowRig_Spine_03SHJnt
+    400082: CowRig_Spine_TopSHJnt
+    400084: CowRig_Tail_01_01SHJnt
+    400086: CowRig_Tail_01_02SHJnt
+    400088: CowRig_Tail_01_03SHJnt
+    400090: CowRig_Tail_01_04SHJnt
+    400092: CowRig_Tail_01_05SHJnt
+    400094: SM_Bear_01
+    400096: SM_Bear_02
+    400098: SM_Bear_03
+    4300000: SM_Bear_01
+    4300002: SM_Bear_02
+    4300004: SM_Bear_03
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SM_Bear_01
+    13700002: SM_Bear_02
+    13700004: SM_Bear_03
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

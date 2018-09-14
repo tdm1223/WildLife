@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 0bb96a83be8577b4bb2ed6bc42d9c4e9
+timeCreated: 1502477196
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone030
+    100002: Bone031
+    100004: Bone032
+    100006: Bone033
+    100008: Bone034
+    100010: Bone035
+    100012: Bone036
+    100014: Bone037
+    100016: Bone038
+    100018: Bone039
+    100020: Bone040
+    100022: Bone041
+    100024: Bone042
+    100026: Bone043
+    100028: Bone044
+    100030: Bone045
+    100032: Bone046
+    100034: Bone047
+    100036: Bone048
+    100038: Bone049
+    100040: Bone050
+    100042: Bone051
+    100044: Bone052
+    100046: Bone053
+    100048: Bone054
+    100050: Bone055
+    100052: Bone056
+    100054: Bone057
+    100056: Bone058
+    100058: Bone059-no
+    100060: Bone060
+    100062: Bone061
+    100064: Bone062
+    100066: Bone063
+    100068: Bone064-no
+    100070: Bone065
+    100072: Bone066
+    100074: Bone067-no
+    100076: Bone068
+    100078: Bone069
+    100080: Cylinder001
+    100082: RootBone
+    100084: //RootNode
+    400000: Bone030
+    400002: Bone031
+    400004: Bone032
+    400006: Bone033
+    400008: Bone034
+    400010: Bone035
+    400012: Bone036
+    400014: Bone037
+    400016: Bone038
+    400018: Bone039
+    400020: Bone040
+    400022: Bone041
+    400024: Bone042
+    400026: Bone043
+    400028: Bone044
+    400030: Bone045
+    400032: Bone046
+    400034: Bone047
+    400036: Bone048
+    400038: Bone049
+    400040: Bone050
+    400042: Bone051
+    400044: Bone052
+    400046: Bone053
+    400048: Bone054
+    400050: Bone055
+    400052: Bone056
+    400054: Bone057
+    400056: Bone058
+    400058: Bone059-no
+    400060: Bone060
+    400062: Bone061
+    400064: Bone062
+    400066: Bone063
+    400068: Bone064-no
+    400070: Bone065
+    400072: Bone066
+    400074: Bone067-no
+    400076: Bone068
+    400078: Bone069
+    400080: Cylinder001
+    400082: RootBone
+    400084: //RootNode
+    4300000: Cylinder001
+    7400000: Snake_Move
+    7400002: Snake_MoveGuard
+    7400004: Snake_MoveAttack
+    9500000: //RootNode
+    13700000: Cylinder001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Snake_Move
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder001
+        weight: 1
+      - path: RootBone
+        weight: 1
+      - path: RootBone/Bone030
+        weight: 1
+      - path: RootBone/Bone030/Bone031
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062/Bone063
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065/Bone066
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068/Bone069
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Snake_MoveGuard
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder001
+        weight: 1
+      - path: RootBone
+        weight: 1
+      - path: RootBone/Bone030
+        weight: 1
+      - path: RootBone/Bone030/Bone031
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062/Bone063
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065/Bone066
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068/Bone069
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Snake_MoveAttack
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder001
+        weight: 1
+      - path: RootBone
+        weight: 1
+      - path: RootBone/Bone030
+        weight: 1
+      - path: RootBone/Bone030/Bone031
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059-no/Bone060/Bone061/Bone062/Bone063
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone064-no/Bone065/Bone066
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068
+        weight: 1
+      - path: RootBone/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Bone051/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone067-no/Bone068/Bone069
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
