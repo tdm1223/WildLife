@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking ;
-   
+using UnityEngine.Networking;
+
 public class Bear : BigWildFSM
 {
     [Header("곰 변수")]
@@ -62,7 +61,6 @@ public class Bear : BigWildFSM
             state = State.Idle;
             LookTarget = null;
         }
-
         aiPath.speed = walkSpeed - 1f;
         aiPath.rotationSpeed = rotationDamping;
         animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
@@ -114,7 +112,6 @@ public class Bear : BigWildFSM
                         StopCoroutine(LookToChase(lookToChaseTimer, currentSpeed, LookTarget));
                     }
                 }
-
             }
             else if (LookTarget == null)
             {
@@ -124,8 +121,9 @@ public class Bear : BigWildFSM
         }
         //벗어날때
         if (Audio != null)
+        {
             Audio.Stop("Walk");
-
+        }
         GoToNextState();
     }
     IEnumerator Chase()
@@ -149,7 +147,6 @@ public class Bear : BigWildFSM
             {
                 animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
                 ChaseTarget.GetComponent<SurvivorStatus>().SetUpRunSpeed();
-
                 aiPath.target = ChaseTarget.transform;
                 float dist = GetDistance(ChaseTarget);
                 if (dist < 1.5f)
@@ -176,7 +173,6 @@ public class Bear : BigWildFSM
                     if (ChaseTarget.GetComponent<SurvivorStatus>().IsDead())
                     {
                         ChaseTarget.GetComponent<SurvivorStatus>().SetBackRunSpeed();
-
                         state = State.Patrol;
                         ChaseTarget = null;
                     }
@@ -198,15 +194,18 @@ public class Bear : BigWildFSM
             if (AttackRange.InTarget != null)
             {
                 if (ChaseTarget != AttackRange.InTarget)
+                {
                     ChaseTarget = AttackRange.InTarget;
+                }
             }
 
             yield return 0;
         }
         //벗어날때
         if (Audio != null)
+        {
             Audio.Stop("Walk");
-
+        }
         GoToNextState();
     }
     IEnumerator Attention()
@@ -223,7 +222,6 @@ public class Bear : BigWildFSM
             {
                 aiPath.target = throwItem.transform;
                 float dist = GetDistance(throwItem);
-                //float dist = Vector3.Distance(throwItem.transform.position, transform.position);
                 if (dist < 2.5f)        //아이템과 가까워지면
                 {
                     aiPath.speed = 0f;
@@ -285,9 +283,13 @@ public class Bear : BigWildFSM
         if (state == State.Attention)
         {
             if (beforeState.Equals("Look"))
+            {
                 aiPath.speed = walkSpeed;
+            }
             else if (beforeState.Equals("Chase"))
+            {
                 aiPath.speed = runSpeed;
+            }
             animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
             aiPath.rotationSpeed = rotationDamping;
             BigWildState = beforeState;
@@ -307,17 +309,11 @@ public class Bear : BigWildFSM
     }
     public void EatRightActionMessage()
     {
-        if(GetOneTarget() != null)
+        if (GetOneTarget() != null)
+        {
             GameController.GetInstance().ActionMessage("Right", "곰은 사람이 버린 물건에 관심을 가집니다.", GetOneTarget());
+        }
     }
-    //public void AvoidPepperSprayRightActionMessage()
-    //{
-    //    GameController.GetInstance().ActionMessage("Right", "곰은 후추스프레이를 싫어합니다.", GetOneTarget());
-    //}
-    //public void AvoidUmbrelleaRightActionMessage()
-    //{
-    //    GameController.GetInstance().ActionMessage("Right", "곰은 우산피는것에 매우 놀랍니다.", GetOneTarget());
-    //}
     IEnumerator StopLook(float stopLookTimer, Vector3 currentPosition)
     {
         yield return new WaitForSeconds(stopLookTimer);
