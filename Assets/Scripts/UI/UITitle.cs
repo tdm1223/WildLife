@@ -7,11 +7,11 @@ using Prototype.NetworkLobby;
 using UnityStandardAssets.Cameras;
 using System;
 
-public class UITitle : UIMain {
-
+public class UITitle : UIMain
+{
     public GameObject lobbyManager;
-
-    void Start () {
+    void Start ()
+    {
         if (LobbyManager.s_Singleton == null || !LobbyManager.s_Singleton.mainMenuPanel.gameObject.activeSelf)
         {
             Logo.SetActive(true);
@@ -28,24 +28,24 @@ public class UITitle : UIMain {
 			{
                 BackButton(optionPanel);
 			}
-            else if (howToPlayPanel.activeSelf) //게임방법창이 켜져있다면 닫기
+            if (howToPlayPanel.activeSelf) //게임방법창이 켜져있다면 닫기
             {
                 BackButton(howToPlayPanel);
             }
-		}
+            if(helpPanel.activeSelf)
+            {
+                BackButton(helpPanel);
+            }
+        }
 	}
 
     //게임 시작버튼
     public void GameStartButton()
     {
-        //Camera.main.GetComponent<MoveCamera>().RotateUPCamera();
-
         Audio.Play("Click");
-
         LobbyManager.s_Singleton.mainMenuPanel.gameObject.SetActive(true);
         LobbyManager.s_Singleton.topPanel.gameObject.SetActive(true);
         LobbyManager.s_Singleton.topPanel.transform.Find("BackButton").gameObject.SetActive(false);
-
         gameObject.SetActive(false);
     }
 
@@ -53,10 +53,11 @@ public class UITitle : UIMain {
     public void OpenMenu(GameObject panel)
     {
         Audio.Play("Click");
-
         panel.SetActive(true);
         menuPanel.SetActive(false);
         if (Logo != null)
+        {
             Logo.SetActive(false);
+        }
     }
 }

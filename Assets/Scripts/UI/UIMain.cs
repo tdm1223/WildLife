@@ -7,13 +7,14 @@ using Prototype.NetworkLobby;
 using UnityStandardAssets.Cameras;
 using System;
 
-public class UIMain : MonoBehaviour {
-
+public class UIMain : MonoBehaviour
+{
     public GameObject menuPanel;
     public GameObject optionPanel;
     public GameObject freelookCamera;
     public Dropdown graphicQualitySetting;
     public GameObject howToPlayPanel;
+    public GameObject helpPanel;
     public Slider volumeSlider;
     public GameObject Logo;
 
@@ -21,7 +22,8 @@ public class UIMain : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake () {
+    void Awake ()
+    {
         List<string> names = new List<string>(QualitySettings.names);
         graphicQualitySetting.AddOptions(names);
 
@@ -48,8 +50,10 @@ public class UIMain : MonoBehaviour {
 
         panel.SetActive(false);
         menuPanel.SetActive(true);
-        if(Logo != null)
+        if (Logo != null)
+        {
             Logo.SetActive(true);
+        }
     }
 
     //게임종료
@@ -89,7 +93,7 @@ public class UIMain : MonoBehaviour {
     }
     private void UpdateVolumeLabel()
     {
-        optionPanel.transform.Find("Master Volume").GetComponent<UnityEngine.UI.Text>().text = "Master Volume - " + (AudioListener.volume * 100).ToString("f2") + "%";
+        optionPanel.transform.Find("Master Volume").GetComponent<UnityEngine.UI.Text>().text = "Master Volume - " + (AudioListener.volume * 100).ToString("f0") + "%";
     }
 
     //감도조절 관련함수

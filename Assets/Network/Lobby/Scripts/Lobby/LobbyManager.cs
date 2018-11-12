@@ -156,7 +156,7 @@ namespace Prototype.NetworkLobby
         public void DisplayIsConnecting()
         {
             var _this = this;
-            infoPanel.Display("Connecting...", "     Cancle", () => { _this.backDelegate(); });
+            infoPanel.Display("Connecting...", "     Cancel", () => { _this.backDelegate(); });
         }
 
         public void SetServerInfo(string status, string host)
@@ -181,14 +181,13 @@ namespace Prototype.NetworkLobby
             Audio.Play("Click");
 
             if (backDelegate != null)
+            {
                 backDelegate();
+            }
             topPanel.isInGame = false;
 
             mainMenuPanel.gameObject.SetActive(false);
             topPanel.gameObject.SetActive(false);
-
-            //Network.Disconnect();
-            //MasterServer.UnregisterHost();
 
             SceneManager.LoadScene("Lobby");
         }
@@ -226,7 +225,6 @@ namespace Prototype.NetworkLobby
                 StopHost();
             }
 
-
             ChangeTo(mainMenuPanel);
         }
 
@@ -253,9 +251,6 @@ namespace Prototype.NetworkLobby
         {
             conn.Send(MsgKicked, new KickMsg());
         }
-
-
-
 
         public void KickedMessageHandler(NetworkMessage netMsg)
         {

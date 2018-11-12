@@ -31,7 +31,6 @@ public class SmallWildFSM : MonoBehaviour {
     private Vector3 targetPosition; //타겟 머리쪽으로 추적 공격
     private Vector3 currentPosition;
 
-    int beastID;
     int targetID;
 
     public virtual void Start()

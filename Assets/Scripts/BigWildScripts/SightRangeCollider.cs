@@ -12,7 +12,8 @@ public class SightRangeCollider : MonoBehaviour
     {
         if (other.tag == "Player" )
         {
-            if (!other.GetComponent<SurvivorStatus>().IsDead()) {
+            if (!other.GetComponent<SurvivorStatus>().IsDead())
+            {
                 isSight = true;
                 targetObjectID = other.gameObject.GetComponent<SurvivorStatus>().PlayerID; //PlayerID 생존자 속성
                 survivors = other.gameObject;

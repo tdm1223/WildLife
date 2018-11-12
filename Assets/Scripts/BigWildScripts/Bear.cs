@@ -17,7 +17,8 @@ public class Bear : BigWildFSM
     private bool backMoveFlag;
     private Quaternion rotation;            //곰 avoid때 저장할 각도
     private float angle;                //look에서 chase넘어가는 잘못된 행동의 각도 판단변수
-    
+    private const float minDistance = 35.0f; //곰에게서 벗어날수 있는 거리
+
     public void FixedUpdate()
     {
         if (backMoveFlag)   //타겟이 우산을 펼치거나 후추스프레이 사용하면 뒤로가는 코드.
@@ -27,7 +28,7 @@ public class Bear : BigWildFSM
     }
     private void OnTriggerEnter(Collider coll)//소리가 들리면 Patrol에서 Detect로 바뀌고 소리가나는방향으로 천천히이동
     {
-        if ((state == State.Patrol || state == State.Idle || state==State.Detect)
+        if ((state == State.Patrol || state == State.Idle || state == State.Detect)
             && (coll.tag == "BearRecogRangeCollider" || coll.tag == "RecogRangeCollider")
             && (!coll.transform.root.GetComponent<SurvivorStatus>().IsDead())
             && (!backMoveFlag))
@@ -81,7 +82,7 @@ public class Bear : BigWildFSM
                     animator.SetFloat("Speed_f", aiPath.speed / runSpeed); //애니메이션 속도조절
                     StartCoroutine(StopLook(stopLookTimer, currentPosition));
                 }
-                else if (dist > 35f)
+                else if (dist > 35.0f)
                 {
                     GameController.GetInstance().ActionMessage("Right", "곰의 시야에서 벗어났습니다.", LookTarget);
                     state = State.Idle;
@@ -129,8 +130,9 @@ public class Bear : BigWildFSM
     IEnumerator Chase()
     {
         if (Audio != null)
+        {
             Audio.Play("Walk");
-
+        }
         LookTarget = null;
         aiPath.speed = runSpeed;
         aiPath.rotationSpeed = rotationDamping;
@@ -155,7 +157,7 @@ public class Bear : BigWildFSM
                     aiPath.rotationSpeed = 360f;
                     animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
                 }
-                else if (dist > 35f)
+                else if (dist > minDistance)
                 {
                     GameController.GetInstance().ActionMessage("Right", "곰의 시야에서 벗어났습니다.", ChaseTarget);
                     state = State.Idle;
@@ -208,9 +210,58 @@ public class Bear : BigWildFSM
         }
         GoToNextState();
     }
+    IEnumerator Attack()
+    {
+        while (state == State.Attack)
+        {
+            if (Time.time > nextAttack)
+            {
+                aiPath.speed = 0f;
+                animator.SetFloat("Speed_f", 0);
+                aiPath.rotationSpeed = 360f;
+                int ran = Random.Range(0, 2);
+
+                switch (ran)
+                {  //곰 공격 애니메이션 실행 
+                    case 0:
+                        animator.Play("Attack");
+                        break;
+                    case 1:
+                        animator.Play("AttackBite");
+                        break;
+                }
+                nextAttack = Time.time + delayTime;
+            }
+            else
+            {
+                animator.SetFloat("Speed_f", 0);
+            }
+
+            //공격 범위를 벗어나면 Chase상태로
+            if (!AttackRange.IsAttack)
+            {
+                state = State.Chase;
+            }
+
+            //공격 타겟이 죽으면 Patrol로
+            if (ChaseTarget != null)
+            {
+                if (ChaseTarget.GetComponent<SurvivorStatus>().IsDead())
+                {
+                    ChaseTarget.GetComponent<SurvivorStatus>().SetBW(null);
+                    ChaseTarget = null;
+                    state = State.Patrol;
+                }
+            }
+
+            yield return 0;
+        }
+        //벗어날때
+        GoToNextState();
+    }
+
     IEnumerator Attention()
     {
-
         aiPath.rotationSpeed = rotationDamping;
         while (state == State.Attention)
         {
@@ -227,7 +278,7 @@ public class Bear : BigWildFSM
                     aiPath.speed = 0f;
                     animator.SetBool("Eat_b", true);
                 }
-                else if (dist > 30f)    //아이템과 멀어도 풀림
+                else if (dist > minDistance)    //아이템과 멀어도 풀림
                 {
                     BigWildState = beforeState;
                 }
@@ -235,9 +286,13 @@ public class Bear : BigWildFSM
                 {
                     aiPath.rotationSpeed = rotationDamping;
                     if (beforeState.Equals("Look"))
+                    {
                         aiPath.speed = walkSpeed;
+                    }
                     else if (beforeState.Equals("Chase"))
+                    {
                         aiPath.speed = runSpeed;
+                    }
                 }
             }
             yield return 0;
@@ -247,7 +302,6 @@ public class Bear : BigWildFSM
     }
     public void AttentionItem(GameObject throwItem)     //생존자가 아이템 던져서 관심가지게실행
     {
-        Debug.Log("AttentionItem");
         if (state != State.Attention && state != State.Attack)
         {
             this.throwItem = throwItem;
@@ -270,12 +324,11 @@ public class Bear : BigWildFSM
     }
     IEnumerator ResetBackMoveFlag()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(4.0f);
         animator.SetBool("Avoid", false);
         state = State.Idle;
-        LookTarget = null;
-        ChaseTarget = null;
-        this.backMoveFlag = false;
+        InitTarget();
+        backMoveFlag = false;
     }
     public void StopAttention()	//Eat애니메이션에서 실행 
     {
@@ -314,6 +367,7 @@ public class Bear : BigWildFSM
             GameController.GetInstance().ActionMessage("Right", "곰은 사람이 버린 물건에 관심을 가집니다.", GetOneTarget());
         }
     }
+
     IEnumerator StopLook(float stopLookTimer, Vector3 currentPosition)
     {
         yield return new WaitForSeconds(stopLookTimer);
@@ -321,7 +375,6 @@ public class Bear : BigWildFSM
         {
             if (LookTarget != null)
             {
-                //animator.SetBool("Eat_b", true);
                 if (LookTarget.transform.position == currentPosition && state != State.Idle) //정해진시간뒤에 포지션이 저장해둔 포지션과 같다면 공격
                 {
                     state = State.Attack;
@@ -341,7 +394,7 @@ public class Bear : BigWildFSM
             if (LookTarget != null && state == State.Look)
             {
                 float angle = Quaternion.Angle(target.transform.rotation, transform.rotation);
-                if (angle < 80f || angle > 280f)
+                if (angle < 80.0f || angle > 280.0f)
                 {
                     state = State.Chase;
                     ChaseTarget = LookTarget;
@@ -349,7 +402,7 @@ public class Bear : BigWildFSM
 
                     GameController.GetInstance().ActionMessage("Wrong", "곰에게 등을 보였습니다.", ChaseTarget);
                 }
-                else if(currentSpeed > 5.0f)
+                else if (currentSpeed > 5.0f)
                 {
                     state = State.Chase;
                     ChaseTarget = LookTarget;

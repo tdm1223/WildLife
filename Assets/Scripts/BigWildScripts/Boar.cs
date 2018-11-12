@@ -218,6 +218,45 @@ public class Boar : BigWildFSM
         GoToNextState();
     }
 
+    IEnumerator Attack()
+    {
+        while (state == State.Attack)
+        {
+            if (Time.time > nextAttack)
+            {
+                aiPath.speed = 0f;
+                animator.SetFloat("Speed_f", 0);
+                aiPath.rotationSpeed = 360f;
+                animator.Play("Attack");
+                nextAttack = Time.time + delayTime;
+            }
+            else
+            {
+                animator.SetFloat("Speed_f", 0);
+            }
+
+            //공격 범위를 벗어나면 Chase상태로
+            if (!AttackRange.IsAttack)
+            {
+                state = State.Chase;
+            }
+
+            //공격 타겟이 죽으면 Patrol로
+            if (ChaseTarget != null)
+            {
+                if (ChaseTarget.GetComponent<SurvivorStatus>().IsDead())
+                {
+                    ChaseTarget.GetComponent<SurvivorStatus>().SetBW(null);
+                    ChaseTarget = null;
+                    state = State.Patrol;
+                }
+            }
+            yield return 0;
+        }
+        //벗어날때
+        GoToNextState();
+    }
+
     IEnumerator ObstacleDistinction(float timer, GameObject target)
     {
         Vector3 currentPosition = target.transform.position;
@@ -274,7 +313,9 @@ public class Boar : BigWildFSM
         rayPosition.x = transform.position.x;
         rayPosition.y = transform.position.y + 1.35f;
         rayPosition.z = transform.position.z;
+
         Vector3 survivorPosition = SightRange.getSurvivors().transform.position - this.transform.position;
+
         if (Physics.Raycast(rayPosition, survivorPosition, out rayHit, MAX_RAY_DISTANCE))
         {
             if (rayHit.collider.tag == "Player")

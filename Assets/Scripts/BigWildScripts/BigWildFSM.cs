@@ -16,7 +16,6 @@ public class BigWildFSM : NetworkBehaviour
         Attention,
     }
 
-
     [Header("야생동물 변수")]
     [Tooltip("회전 속도")]
     public float rotationDamping;
@@ -28,9 +27,11 @@ public class BigWildFSM : NetworkBehaviour
     public int attackDamage;
     [Tooltip("Idle상태에서 다시 Patrol로 넘어가기위한 시간")]
     public float stopIdleTimer;
-
+    [Tooltip("공격 딜레이")]
+    public float delayTime = 1.0f;   //공격 딜레이
 
     //나머지 변수들
+    protected const float MAX_RAY_DISTANCE = 30.0f; //레이 인식 거리
     protected Transform detectPoint;
     protected GameObject detect;
     protected Transform nextPoint;
@@ -45,17 +46,13 @@ public class BigWildFSM : NetworkBehaviour
     protected GameObject lookTarget;
     protected SightRangeCollider SightRange;
     protected AttackRangeCollider AttackRange;
-
     protected RaycastHit rayHit;
-    protected float MAX_RAY_DISTANCE = 30.0f; //레이 인식 거리
     protected Vector3 rayPosition;
-    protected float delayTime = 1f;   //공격 딜레이
     protected float nextAttack = 0.0f;
 
     bool patrolFlag = false;
     bool detectFlag = false;
-    int beastID;
-    int targetID;
+
     Bounds spawnBounds;
     float MinX, MaxX, MinZ, MaxZ;
 
@@ -63,8 +60,7 @@ public class BigWildFSM : NetworkBehaviour
     {
         //기본상태로 야생동물이 맵 전체를 무작위로 돌아다니는 Patrol
         state = State.Patrol;
-        ChaseTarget = null;
-        LookTarget = null;
+        InitTarget();
 
         SightRange = transform.Find("SightRangeCollider").GetComponent<SightRangeCollider>();
         AttackRange = transform.Find("AttackRangeCollider").GetComponent<AttackRangeCollider>();
@@ -85,26 +81,26 @@ public class BigWildFSM : NetworkBehaviour
         MinZ = spawnBounds.min.z;
         MaxZ = spawnBounds.max.z;
 
-        if(GetComponent<ObjectAudio>() != null)
+        if (GetComponent<ObjectAudio>() != null)
+        {
             Audio = GetComponent<ObjectAudio>();
+        }
     }
     public void Start()
     {
         GoToNextState();
     }
+
     protected IEnumerator Idle()
     {
         //들어올때
         aiPath.speed = 0f; //이동속도 0
         aiPath.rotationSpeed = 0f; //회전속도 0
-        LookTarget = null;
-        ChaseTarget = null;
+        InitTarget();
         while (state == State.Idle)
         {
             //업데이트할때            
             animator.SetFloat("Speed_f", aiPath.speed / runSpeed); //애니메이션 속도조절
-            //animator.SetBool("Eat_b", true); // Idle 애니메이션
-
             Vector3 currentPosition = transform.position;
             transform.position = currentPosition; //위치 고정
             StartCoroutine(StopIdle(stopIdleTimer, currentPosition));
@@ -116,18 +112,17 @@ public class BigWildFSM : NetworkBehaviour
     protected IEnumerator Patrol()
     {
         if (Audio != null)
+        {
             Audio.Play("Walk");
-
+        }
         aiPath.speed = walkSpeed;
         aiPath.rotationSpeed = rotationDamping;
         animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
-        LookTarget = null;
-        ChaseTarget = null;
+        InitTarget();
         patrolFlag = false;
         while (state == State.Patrol)
         {
             //업데이트할때
-            
             if (!patrolFlag)
             {
                 patrolFlag = true;
@@ -137,7 +132,7 @@ public class BigWildFSM : NetworkBehaviour
             float dist = GetDistance(aiPath.target.gameObject);
 
             //어느정도 가까워지면 다음 포인트를 지정하고 잠깐idle상태
-            if (dist <= 2f)
+            if (dist <= 2.0f)
             {
                 state = State.Idle;
                 //idle상태에서 idle상태 후에 Patrol로 자동으로 돌아와서 위치 계산
@@ -145,22 +140,27 @@ public class BigWildFSM : NetworkBehaviour
 
             //시야안에 플레이어가 있다면 레이쏘는 함수 실행
             if (SightRange.getSurvivors() != null)
+            {
                 if (!SightRange.getSurvivors().transform.GetComponent<SurvivorStatus>().IsDead())
+                {
                     InSightRange();
-
+                }
+            }
             yield return 0;
         }
         //벗어날때
         if (Audio != null)
+        {
             Audio.Stop("Walk");
-
+        }
         GoToNextState();
-
     }
     protected IEnumerator Detect()
     {
         if (Audio != null)
+        {
             Audio.Play("Walk");
+        }
         aiPath.speed = walkSpeed - 0.5f;
         aiPath.rotationSpeed = rotationDamping;
         animator.SetFloat("Speed_f", aiPath.speed / runSpeed);
@@ -178,68 +178,19 @@ public class BigWildFSM : NetworkBehaviour
 
             //시야안에 플레이어가 있다면 레이쏘는 함수 실행
             if (SightRange.getSurvivors() != null)
+            {
                 if (!SightRange.getSurvivors().transform.GetComponent<SurvivorStatus>().IsDead())
+                {
                     InSightRange();
-
+                }
+            }
             yield return 0;
         }
         //벗어날때
         if (Audio != null)
-            Audio.Stop("Walk");
-
-        GoToNextState();
-    }
-    protected IEnumerator Attack()
-    {
-        while (state == State.Attack)
         {
-            if (Time.time > nextAttack)
-            {
-                aiPath.speed = 0f;
-                animator.SetFloat("Speed_f", 0);
-                aiPath.rotationSpeed = 360f;
-                int ran = Random.Range(0, 2);
-                if (this.transform.tag == "Boar")
-                {
-                    animator.Play("Attack");
-                }
-                else
-                {
-                    switch (ran)
-                    {  //곰 공격 애니메이션 실행 
-                        case 0:
-                            animator.Play("Attack");
-                            break;
-                        case 1:
-                            animator.Play("AttackBite");
-                            break;
-                    }
-                }
-                nextAttack = Time.time + delayTime;
-            }
-            else
-            {
-                animator.SetFloat("Speed_f", 0);
-            }
-
-            //공격 범위를 벗어나면 Chase상태로
-            if (!AttackRange.IsAttack)
-                state = State.Chase;
-
-            //공격 타겟이 죽으면 Patrol로
-            if (ChaseTarget != null)
-            {
-                if (ChaseTarget.GetComponent<SurvivorStatus>().IsDead())
-                {
-                    ChaseTarget.GetComponent<SurvivorStatus>().SetBW(null);
-                    ChaseTarget = null;
-                    state = State.Patrol;
-                }
-            }
-
-            yield return 0;
+            Audio.Stop("Walk");
         }
-        //벗어날때
         GoToNextState();
     }
 
@@ -253,7 +204,7 @@ public class BigWildFSM : NetworkBehaviour
 
         if (Physics.Raycast(point.transform.position, Vector3.down, out rayHit, 100))
         {         
-            if (rayHit.collider.gameObject.layer == 9)
+            if (rayHit.collider.gameObject.layer == 9)//ground
             {
                 point.transform.position = rayHit.point;
             }
@@ -266,7 +217,7 @@ public class BigWildFSM : NetworkBehaviour
         return point.transform;
     }
 
-    //탐지 포인트 지정
+    // 탐지 포인트 지정
     public Transform SetDetectPoint(GameObject point)
     {
         point.transform.position = detectPoint.position;
@@ -279,13 +230,13 @@ public class BigWildFSM : NetworkBehaviour
         return (target.transform.position - transform.position).magnitude;
     }
 
-    //상태를 바꾸는 함수
+    // 상태를 바꾸는 함수
     protected void GoToNextState()
     {
-        //호출하기 원하는 함수의 이름
+        // 호출하기 원하는 함수의 이름
         string methodName = state.ToString();
 
-        //클래스에서 해당 상태의 함수를 검색
+        // 클래스에서 해당 상태의 함수를 검색
         System.Reflection.MethodInfo info = GetType().GetMethod(methodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
         StartCoroutine((IEnumerator)info.Invoke(this, null));
     }
@@ -296,9 +247,10 @@ public class BigWildFSM : NetworkBehaviour
         if (ChaseTarget != null)
         {
             ChaseTarget.GetComponent<SurvivorStatus>().addtoHP(-attackDamage, transform.position, gameObject.tag);
-
             if (Audio != null)
+            {
                 Audio.Play("Attack");
+            }
         }
     }
 
@@ -365,10 +317,17 @@ public class BigWildFSM : NetworkBehaviour
     public GameObject GetOneTarget()
     {
         if (LookTarget != null)
+        {
             return LookTarget;
+        }
         else if (ChaseTarget != null)
+        {
             return ChaseTarget;
-        else return null;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     IEnumerator StopIdle(float stopIdleTimer, Vector3 currentPosition)
@@ -398,7 +357,6 @@ public class BigWildFSM : NetworkBehaviour
 
         if (Physics.Raycast(rayPosition, survivorPosition, out rayHit, MAX_RAY_DISTANCE))
         {
-            //Debug.DrawRay(rayPosition, survivorPosition * 30.0f, Color.red, 2);
             if (rayHit.collider.tag == "Player")
             {
                 LookTarget = SightRange.getSurvivors().transform.gameObject;
@@ -406,5 +364,12 @@ public class BigWildFSM : NetworkBehaviour
                 LookTarget.GetComponent<SurvivorStatus>().SetBW(gameObject);
             }
         }
+    }
+
+    //LookTarget과 ChaseTarget을 초기화 하는 함수
+    public void InitTarget()
+    {
+        LookTarget = null;
+        ChaseTarget = null;
     }
 }
