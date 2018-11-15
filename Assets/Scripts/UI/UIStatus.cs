@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIStatus : MonoBehaviour
 {
-
     Image hpIcon;
     Text hpText;
     Image hungerIcon;

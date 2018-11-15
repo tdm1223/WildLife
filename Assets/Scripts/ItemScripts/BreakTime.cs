@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BreakTime : Item
 {
-
     public int HPRecovery;
     public int HungerRecovery;
     SurvivorRecogRangeCollider cont;
@@ -23,20 +22,19 @@ public class BreakTime : Item
 		cont.CmdSetBearColliderRadius(passiveRadius);
         cont.CmdSetBeeColliderEnable(true);
 		cont.CmdSetBeeColliderRadius(passiveRadius/3);
-
     }
+
     public override void DePassive()
     {
         Owner.transform.SendMessage("BreakTimeDuration");
     }
+
     public override void Use(int pos)
     {
         base.Use(pos);
         HPup();
-
 		cont.CmdSetBearColliderRadius(usedRadius);
 		cont.CmdSetBeeColliderRadius(usedRadius/3);
-
         Owner.transform.SendMessage("BreakTimeDuration");
     }
 

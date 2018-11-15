@@ -32,7 +32,6 @@ public class SurvivorAudio : NetworkBehaviour
     bool waterRunSoundFlag = false;
     bool waterSneakSoundFlag = false;
 
-    // Use this for initialization
     void Start()
     {
         walkSound = SetUpEngineAudioSource(walkSound_c, 0.5f, true);

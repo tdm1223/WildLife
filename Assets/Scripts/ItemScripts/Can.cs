@@ -20,6 +20,7 @@ public class Can : Item
         cont = Owner.GetComponent<SurvivorRecogRangeCollider>();
 		cont.CmdSetBearColliderRadius(passiveRadius);
     }
+
     public override void Use(int pos)
     {
         base.Use(pos);

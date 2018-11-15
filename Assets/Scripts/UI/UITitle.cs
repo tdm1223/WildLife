@@ -60,4 +60,16 @@ public class UITitle : UIMain
             Logo.SetActive(false);
         }
     }
+
+    public override void BackButton(GameObject panel)
+    {
+        Audio.Play("Click");
+
+        panel.SetActive(false);
+        menuPanel.SetActive(true);
+        if (Logo != null)
+        {
+            Logo.SetActive(true);
+        }
+    }
 }

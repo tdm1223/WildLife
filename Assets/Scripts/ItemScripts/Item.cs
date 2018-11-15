@@ -7,7 +7,6 @@ using UnityEngine.Networking;
 public class Item : NetworkBehaviour
 {
     protected string itemName;
-    //protected int kind;
     private int kind;
 
     public int useCount;
@@ -36,13 +35,6 @@ public class Item : NetworkBehaviour
     }
     public virtual void Use(int pos)
     {
-        //var Item = Owner.GetComponent<SurvivorInventory>().getslot(pos).transform;
-        //if (Item.childCount > 0)
-        //{
-        //    Transform child = Item.GetChild((useCount - 2));
-        //    Destroy(child.gameObject);
-        //}
-
         if (Audio != null)
             Audio.Play(owner, "Use");
     }
@@ -52,10 +44,8 @@ public class Item : NetworkBehaviour
     public virtual void Hold()
     {
         GetComponent<NetworkTransform>().enabled = false;
-        SetEquip(true); //모든 콜라이더 해제
-        
-        Equip(EquipPoint);
-       
+        SetEquip(true); //모든 콜라이더 해제    
+        Equip(EquipPoint);    
     }
     public virtual void UnHold()
     {
@@ -73,10 +63,8 @@ public class Item : NetworkBehaviour
         transform.SetPositionAndRotation(transform.position + Vector3.down * 5f, Quaternion.identity); //아래에 숨기고 
     }
 
-
     protected virtual void GetItem(SurvivorController itemOwner)
     {
-        //Debug.Log("겟아이템 함수호출" + OnField);
         if (OnField)
         {
             Owner = itemOwner.gameObject; // 아이템의 소유자를 지정한다. 

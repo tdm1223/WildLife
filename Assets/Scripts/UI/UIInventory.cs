@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIInventory : MonoBehaviour {
-
+public class UIInventory : MonoBehaviour
+{ 
     int inventoryCapacity = 6;
-
     Image[] SlotImage;
     Text[] SlotText;
     Text[] SlotBundleCount;
     GameObject selectImage;
-    RectTransform InventoryUIBackground;
+    //RectTransform InventoryUIBackground;
     GameObject ExtendedInventoryUIBackground;
 
     void Start()
@@ -21,7 +20,7 @@ public class UIInventory : MonoBehaviour {
         SlotBundleCount = new Text[inventoryCapacity];
 
         selectImage = transform.Find("Select Image").gameObject;
-        InventoryUIBackground = transform.Find("InventoryUIBackground").GetComponent<RectTransform>();
+        //InventoryUIBackground = transform.Find("InventoryUIBackground").GetComponent<RectTransform>();
         ExtendedInventoryUIBackground = transform.Find("ExtendedInventoryUIBackground").gameObject;
 
         for (int i = 0; i < inventoryCapacity ; i++)
@@ -66,7 +65,6 @@ public class UIInventory : MonoBehaviour {
 
     void ExtendInventory()
     {
-        //InventoryUIBackground.sizeDelta = new Vector2(550f, 100);
         ExtendedInventoryUIBackground.SetActive(true);
     }
 

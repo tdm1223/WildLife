@@ -6,13 +6,12 @@ public class Umbrella : Item
 {
     private GameObject instantiateUmbrellaCollider;
     public GameObject umbrellaCollider;
-    private int umbrellaDurability; //우산 내구도 미구현
+    private int umbrellaDurability;
     private Animator animator;
 
     public override void Start()
     {
         Audio = GetComponent<ItemAudioPlayer>();
-
         OnField = true;
         ItemName = "우산";
         EquipTag = "EquipUmbrella";
@@ -21,13 +20,13 @@ public class Umbrella : Item
         animator = transform.GetComponent<Animator>();
         animator.SetBool("UmbrellaOn", false);
     }
+
     public override void Use(int pos)
     {
         base.Use(pos);
         if (Owner.GetComponent<SurvivorStatus>().UmbrellaState == false)
         {
             Owner.GetComponent<SurvivorStatus>().SetUmbrellaState(true);
-
             SendMsgManager.GetInstance().SendUmbrellaAnimSyncMsg(gameObject, true);
             instantiateUmbrellaCollider = (GameObject)Instantiate(umbrellaCollider) as GameObject;
             instantiateUmbrellaCollider.transform.SetParent(Owner.transform);
@@ -38,7 +37,6 @@ public class Umbrella : Item
         else if (Owner.GetComponent<SurvivorStatus>().UmbrellaState == true)
         {
             Owner.GetComponent<SurvivorStatus>().SetUmbrellaState(false);
-
             SendMsgManager.GetInstance().SendUmbrellaAnimSyncMsg(gameObject, false);
         }
     }

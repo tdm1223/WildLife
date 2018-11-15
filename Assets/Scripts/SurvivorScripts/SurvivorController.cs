@@ -436,46 +436,19 @@ public class SurvivorController : NetworkBehaviour
             waterCheck = value;
         }
     }
-    //public bool BellFlag
-    //{
-    //    get
-    //    {
-    //        return bellFlag;
-    //    }
-
-    //}
-
-    //public bool GarlicFlag
-    //{
-    //    get
-    //    {
-    //        return garlicFlag;
-    //    }
-
-    //}
-
-    //[Command]
-    //public void CmdSetGarlicFlag(bool value)
-    //{
-    //    garlicFlag = value;
-    //}
-
-    //[Command]
-    //public void CmdSetBellFlag(bool value)
-    //{
-    //    bellFlag = value;
-    //}
 
     public void PerfumeDuration() //향수 사용시 벌에 대한 감지범위 지속시간 설정
     {
-        StartCoroutine(BeePerfumeDurationTime(15f));
+        StartCoroutine(BeePerfumeDurationTime(15.0f));
     }
+
     public void SandwichDuration() //샌드위치 먹을시 곰과 멧돼지에 대한 감지범위 지속시간 설정
     {
 
         StartCoroutine(BearDurationTime(2.0f));
         StartCoroutine(BoarDurationTime(2.0f));
     }
+
     public void CanDuration() //통조림 먹을시 곰에 대한 감지범위 지속시간 설정
     {
 
@@ -501,7 +474,6 @@ public class SurvivorController : NetworkBehaviour
         StartCoroutine(SnakeDurationTime(3.0f));
     }
 
-
     IEnumerator BeeDurationTime(float duration) //지속시간후에 벌에 대한 감지범위의 콜라이더 비활성화
     {
         yield return new WaitForSeconds(duration);
@@ -509,22 +481,19 @@ public class SurvivorController : NetworkBehaviour
         if (transform.GetComponent<SurvivorInventory>().CheckLastItemFlag)
         {
             cont.CmdSetBeeColliderEnable(false);
-
         }
         else //아니면 passive 상태의 콜라이더 유지
         {
-
             cont.CmdSetBeeColliderRadius(10);
-
         }
     }
+
     IEnumerator BeePerfumeDurationTime(float duration) //지속시간후에 벌에 대한 감지범위의 콜라이더 비활성화
     {
         cont = transform.GetComponent<SurvivorRecogRangeCollider>();
         yield return new WaitForSeconds(duration);
         cont.CmdSetBeeColliderEnable(false);
     }
-
 
     IEnumerator BearDurationTime(float duration) //지속시간후에 곰에 대한 감지범위의 콜라이더 비활성화
     {
@@ -533,15 +502,13 @@ public class SurvivorController : NetworkBehaviour
         if (transform.GetComponent<SurvivorInventory>().CheckLastItemFlag)
         {
             cont.CmdSetBearColliderEnable(false);
-
         }
         else //아니면 passive 상태의 콜라이더 유지
         {
             cont.CmdSetBearColliderRadius(10);
-
-
         }
     }
+
     IEnumerator BoarDurationTime(float duration) //지속시간후에 멧돼지에 대한 감지범위의 콜라이더 비활성화
     {
         yield return new WaitForSeconds(duration);
@@ -549,48 +516,26 @@ public class SurvivorController : NetworkBehaviour
         if (transform.GetComponent<SurvivorInventory>().CheckLastItemFlag)
         {
             cont.CmdSetBoarColliderEnable(false);
-
         }
         else //아니면 passive 상태의 콜라이더 유지
         {
             cont.CmdSetBoarColliderRadius(10);
-
         }
     }
+
     IEnumerator SnakeDurationTime(float duration) //지속시간후에 뱀에 대한 감지범위의 콜라이더 비활성화
     {
         yield return new WaitForSeconds(duration);
         //일정시간후에 그게 마지막 아이템이었다면 콜라이더 비활성화
         if (transform.GetComponent<SurvivorInventory>().CheckLastItemFlag)
         {
-
             cont.CmdSetSnakeColliderEnable(false);
-
         }
         else //아니면 passive 상태의 콜라이더 유지
         {
             cont.CmdSetSnakeColliderRadius(1.5f);
-
         }
     }
-
-    //public bool GetUmbrellaState()
-    //{
-    //    return umbrellaState;
-    //}
-    //public void SetUmbrellaState()
-    //{
-    //    if (umbrellaState == false)
-    //    {
-    //        playerAnimator.Play("UmbrellaOpen");
-    //        umbrellaState = true;
-    //    }
-    //    else if (umbrellaState == true)
-    //    {
-    //        playerAnimator.Play("UmbrellaClose");
-    //        umbrellaState = false;
-    //    }
-    //}
 
     public bool UmbrellaState
     {
@@ -611,6 +556,7 @@ public class SurvivorController : NetworkBehaviour
             }
         }
     }
+
     public void UmbrellaCheck()     //우산 피고있는상태로 다른 아이템바꾸면 들고있는 애니메이션 풀리고 우산 접은상태로바꿔놓는
     {
         if (UmbrellaState == true)
@@ -626,64 +572,50 @@ public class SurvivorController : NetworkBehaviour
             }
         }
     }
+
     public void UmbrellaThrow(Item Umbrella)
     {
         UmbrellaState = false;
         Umbrella.gameObject.GetComponent<Animator>().SetBool("UmbrellaOn", false);
-        Debug.Log("우산 버림");
     }
+
     public void Emotion_ResetInt()
     {
         playerAnimator.SetInteger("EmotionNum_Int", 0);
     }
-
 
     [Command]
     public void CmdSpawnObjcet(GameObject obj, Vector3 point, Quaternion q)
     {
         GameObject effect = Instantiate(obj, point, q);
         NetworkServer.Spawn(effect);
-        Debug.Log("스폰 이펙트");
         DsetroyEffect(effect);
     }
 
-
     public void DestroyEffect(GameObject obj)
     {
-        Debug.Log("디스트로이 이펙트");
         StartCoroutine(DsetroyEffect(obj));
     }
 
     IEnumerator DsetroyEffect(GameObject obj)
     {
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("코루틴 디스트로이 이펙트");
         NetworkServer.Destroy(obj);
-
-        //CmdDestroyObject(obj);
     }
-
-    //  [Command]
-    // public void CmdDestroyObject(GameObject obj)
-    ////  {
-    //    NetworkServer.Destroy(obj);
-    // }
 
     public void SetUpRunSpeed(float value)
     {
         if (runSpeed == runSpeedBackUp)
         {
-            //Debug.Log("SetUpRunSpeed");
             runSpeed *= value;
         }
     }
+
     public void SetBackRunSpeed()
     {
         if (runSpeed != runSpeedBackUp)
         {
-            //Debug.Log("SetBackRunSpeed");
             runSpeed = runSpeedBackUp;
         }
     }
-
 }

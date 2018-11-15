@@ -36,7 +36,6 @@ public class SendMsgManager : NetworkBehaviour
     const short TFTruemsg = 1024;
 
     NetworkClient m_client;
-    //SendToServerMsg NetworkSingleton;
     NetworkClient client;
 
     private static SendMsgManager instance;
@@ -121,7 +120,6 @@ public class SendMsgManager : NetworkBehaviour
         }
     }
 
-
     public void TFTrue(GameObject item)
     {
         ItemObjectMsg msg = new ItemObjectMsg();
@@ -129,7 +127,6 @@ public class SendMsgManager : NetworkBehaviour
 
         m_client.Send(TFTruemsg, msg);
     }
-
 
     void OnServerTFTrue(NetworkMessage recvmsg)
     {
@@ -144,15 +141,8 @@ public class SendMsgManager : NetworkBehaviour
     {
         var msg = recvmsg.ReadMessage<ItemObjectMsg>();
         var item = msg.item;
-
-
         item.GetComponent<Item>().TFTrue();
     }
-
-
-
-
-
 
     class NetworkTransformmsg : MessageBase
     {
@@ -160,12 +150,7 @@ public class SendMsgManager : NetworkBehaviour
         public bool value;
     }
 
-
-
-
-
     public void SetNetworkTransformFalse(GameObject obj, bool value)
-
     {
         NetworkTransformmsg msg = new NetworkTransformmsg();
         msg.target = obj;
@@ -178,7 +163,6 @@ public class SendMsgManager : NetworkBehaviour
         var msg = rcvmsg.ReadMessage<NetworkTransformmsg>();
         var target = msg.target;
         var value = msg.value;
-
         target.GetComponent<NetworkTransform>().enabled = value;    //Null 오류 라인
         NetworkServer.SendToAll(SetNetworkTransformMsg, msg);
     }
@@ -187,14 +171,8 @@ public class SendMsgManager : NetworkBehaviour
         var msg = rcvmsg.ReadMessage<NetworkTransformmsg>();
         var target = msg.target;
         var value = msg.value;
-
         target.GetComponent<NetworkTransform>().enabled = value;
     }
-
-
-
-
-
 
     class ParticleObj : MessageBase
     {
@@ -209,7 +187,6 @@ public class SendMsgManager : NetworkBehaviour
         msg.obj = obj;
         msg.point = point;
         msg.q = q;
-
         m_client.Send(SpawnParticleMsg, msg);
     }
 
@@ -217,24 +194,19 @@ public class SendMsgManager : NetworkBehaviour
     {
         var msg = rcvmsg.ReadMessage<ParticleObj>();
         GameObject effect = Instantiate(msg.obj, msg.point, msg.q);
-
         NetworkServer.Spawn(effect);
     }
 
     public void DestroyBee(GameObject bee)
     {
         GameObjectMsg msg = new GameObjectMsg();
-
         msg.TargetObject = bee;
-
-
         m_client.Send(BeeDestroyMsg, msg);
     }
 
 
     void OnServerDestroyBee(NetworkMessage rcvmsg)
     {
-
         var msg = rcvmsg.ReadMessage<GameObjectMsg>();
         if (msg.TargetObject != null)
         {
@@ -270,21 +242,11 @@ public class SendMsgManager : NetworkBehaviour
         child.transform.SetParent(parent.transform);
     }
 
-
-
-
-
-
-
     public class TrapObjectMsg : MessageBase
-
     {
         public GameObject target;
         public Vector3 pos;
     }
-
-
-
 
     public void LocateTrap(GameObject target, Vector3 position)
     {
@@ -298,11 +260,8 @@ public class SendMsgManager : NetworkBehaviour
 
     void OnServerLocateTrap(NetworkMessage recvmsg)
     {
-
         TrapObjectMsg msg = recvmsg.ReadMessage<TrapObjectMsg>();
         msg.target.GetComponent<Trap>().isLocated = true;
-
-        //msg.target.transform.localRotation.SetLookRotation(new Vector3(0,1,0),msg.pos + Vector3.up);
         msg.target.transform.SetPositionAndRotation(msg.pos, Quaternion.identity);
 
         var compo = msg.target.GetComponent<Item>();
@@ -492,12 +451,6 @@ public class SendMsgManager : NetworkBehaviour
         GameController.GetInstance().SurvivorDead(playerID);
     }
 
-
-    /// <summary>
-    /// ////////////////////////////////////////페퍼스프레이
-    /// </summary>
-    /// 
-
     public class GameObjectMsg : MessageBase
     {
         public GameObject TargetObject;
@@ -529,18 +482,13 @@ public class SendMsgManager : NetworkBehaviour
             BWStates.ChaseTarget = null;
             BWStates.GetComponent<Bear>().SendMessage("SetBackMoveFlag", true);
         }
-
-
         NetworkServer.SendToAll(SendPepperSprayMsgIndex, msg);
     }
 
     public void OnClientPepper(NetworkMessage netMsg)
     {
-        Debug.Log("페퍼스프레이 클라이언트에서 호출");
         var msg = netMsg.ReadMessage<GameObjectMsg>();
-
         var BWStates = msg.TargetObject.GetComponent<BigWildFSM>();
-
         if (BWStates.BigWildState != "Idle")
         {
             BWStates.BigWildState = "Idle";
@@ -548,12 +496,12 @@ public class SendMsgManager : NetworkBehaviour
             BWStates.ChaseTarget = null;
             BWStates.GetComponent<Bear>().SendMessage("SetBackMoveFlag", true);
             if (BWStates.GetOneTarget() != null)
+            {
                 BWStates.GetOneTarget().GetComponent<SurvivorStatus>().SetBW(null);
+            }
         }
-
-        Debug.Log(msg.TargetObject.name + "페퍼 스프레이 싱크!!");
     }
-    //////////////////////////////////////////////////////////////////////////////////////아이템 장착 노장착
+
     public void EquipItem(GameObject item)
     {
         ItemObjectMsg msg = new ItemObjectMsg();
@@ -576,7 +524,7 @@ public class SendMsgManager : NetworkBehaviour
     {
         var msg = recvmsg.ReadMessage<ItemObjectMsg>();
         var item = msg.item;
-        var owner = msg.owner;
+        //var owner = msg.owner;
 
         item.GetComponent<Item>().Hold();
     }
@@ -603,7 +551,7 @@ public class SendMsgManager : NetworkBehaviour
     {
         var msg = recvmsg.ReadMessage<ItemObjectMsg>();
         var item = msg.item;
-        var owner = msg.owner;
+        //var owner = msg.owner;
 
         item.GetComponent<Item>().UnHold();
     }
@@ -677,8 +625,6 @@ public class SendMsgManager : NetworkBehaviour
         GameController.GetInstance().StartClock();
     }
 
-
-    /// /////////////////////////////////////////////////
     public class GameObjectDouble : MessageBase
     {
         public GameObject target;
@@ -708,7 +654,6 @@ public class SendMsgManager : NetworkBehaviour
     }
 
     // Audio
-
     public class AudioMsg : MessageBase
     {
         public GameObject owner;
@@ -724,7 +669,9 @@ public class SendMsgManager : NetworkBehaviour
         msg.index = index;
 
         if (m_client.isConnected)
+        {
             NetworkServer.SendToAll(AudioPlayMsg, msg);
+        }
 
         msg.owner.GetComponent<ObjectAudio>().StartAudioSource(msg.audioName, msg.index);
     }
@@ -741,9 +688,13 @@ public class SendMsgManager : NetworkBehaviour
             if (isServer)
             {
                 if (Player.GetComponent<SurvivorStatus>().isLocalPlayer)
+                {
                     msg.owner.GetComponent<ObjectAudio>().StartAudioSource(msg.audioName, msg.index);
+                }
                 else
+                {
                     NetworkServer.SendToClient(Player.GetComponent<NetworkIdentity>().connectionToClient.connectionId, AudioPlayMsg, msg);
+                }
             }
             else
                 Debug.Log("isClient");
@@ -753,7 +704,6 @@ public class SendMsgManager : NetworkBehaviour
     void PlayAudio(NetworkMessage recvmsg)
     {
         AudioMsg msg = recvmsg.ReadMessage<AudioMsg>();
-
         msg.owner.GetComponent<ObjectAudio>().StartAudioSource(msg.audioName, msg.index);
     }
 
@@ -763,17 +713,16 @@ public class SendMsgManager : NetworkBehaviour
         msg.owner = owner;
         msg.audioName = audioName;
         msg.index = index;
-
         if (m_client.isConnected)
+        {
             NetworkServer.SendToAll(AudioStopMsg, msg);
-
+        }
         msg.owner.GetComponent<ObjectAudio>().EndAudioSource(msg.audioName, msg.index);
     }
 
     void StopAudio(NetworkMessage recvmsg)
     {
         AudioMsg msg = recvmsg.ReadMessage<AudioMsg>();
-
         msg.owner.GetComponent<ObjectAudio>().EndAudioSource(msg.audioName, msg.index);
     }
 }

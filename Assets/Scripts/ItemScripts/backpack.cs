@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class backpack : Item {
-
-	// Use this for initialization
-	public override void Start () {
+public class backpack : Item
+{
+	public override void Start ()
+    {
         base.Start();
         ItemName = "가방";
         EquipTag = "EquipBack";
@@ -17,9 +17,4 @@ public class backpack : Item {
         transform.localPosition = new Vector3(0.226f, -0.372f, 0.00f); //부모 오브젝트로부터 상대 좌표를 0으로 지정한다. 
         transform.localRotation = Quaternion.Euler(-170.514f, 89.655f, 4.256f);
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mushroom : Item {
-
+public class Mushroom : Item
+{
     public int HPRecovery;
     public int HungerRecovery;
-
     public int RecoveryRatio;
     public int DamageRatio;
     public Material[] material = new Material[5];
@@ -18,11 +17,13 @@ public class Mushroom : Item {
         ItemName = "버섯";
         EquipTag = "EquipArm";
     }
+
     public override void Use(int pos)
     {
         base.Use(pos);
         RecoveryOrDamaged(Choose());
     }
+
     private void RecoveryOrDamaged(bool flag)
     {
         if (flag == true)
@@ -37,7 +38,8 @@ public class Mushroom : Item {
             Owner.GetComponent<SurvivorStatus>().addtoHunger(-HungerRecovery);
         }
     }
-    bool randomBoolean() //반반으로 True,False 반환
+
+    bool RandomBoolean() //반반으로 True,False 반환
     {
         if (Random.value >= 0.5)
         {
@@ -49,12 +51,15 @@ public class Mushroom : Item {
     protected bool Choose()
     {
         float total = RecoveryRatio + DamageRatio;
-
         float randomPoint = UnityEngine.Random.value * total;
 
         if (randomPoint <= RecoveryRatio)
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
     }    
 }

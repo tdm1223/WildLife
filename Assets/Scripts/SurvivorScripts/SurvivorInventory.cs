@@ -192,7 +192,7 @@ public class SurvivorInventory : NetworkBehaviour
     public void ThrowItem(int pos)
     {
         Item item = getItem(pos);
-        ItemSlot Slot = getslot(pos);
+        //ItemSlot Slot = getslot(pos);
         var UseCount = item.useCount;
         var Owner = item.Owner;
 
@@ -234,12 +234,6 @@ public class SurvivorInventory : NetworkBehaviour
         }
     }
 
-    //[Command]
-    //void CmdSpawnItem(GameObject item)
-    //{
-    //    NetworkServer.Spawn(item);
-    //}
-
     public void SpawnObject(GameObject item, Vector3 position, string name)
     {
         CmdSpawnItem(item, position, name);
@@ -265,27 +259,17 @@ public class SurvivorInventory : NetworkBehaviour
     {
         if (gameObject.name.Equals(name))
         {
-           // Debug.Log("RpcSetthrowitem set 이야!!");
             throwItem = item;
-        }
-        if (throwItem == null)
-        {
-           // Debug.Log("RpcSetthrowitem null 이야!!");
         }
     }
 
     public void ItemUse(int pos)
     {
-        Item CurrentItem = getItem(pos);
-       
-        var slot = getslot(pos);
-        
+        Item CurrentItem = getItem(pos);     
+        var slot = getslot(pos);      
         string slotName = slot.Item.ItemName;
         CheckLastItemFlag = CheckLastItem(slotName);
-
-
         CurrentItem.Use(pos);
-
 
         if ((CurrentItem.Kind == 102) && (GetComponent<SurvivorStatus>().UmbrellaState == true))
         {               //우산은 카운트 주는 케이스가 다르기 때문에 필때만 줄어든다
@@ -298,7 +282,6 @@ public class SurvivorInventory : NetworkBehaviour
             {
                 StartCoroutine(UmbrellaDestroyDelay(pos, CurrentItem));
             }
-            //Debug.Log("현재 맥스카운트" + CurrentItem.maxCount);
         }
         else if (CurrentItem.Kind != 102 && CurrentItem.Kind != 103)
         {

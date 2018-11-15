@@ -21,9 +21,18 @@ public class Antidote : Item
     public override void Start()
     {
         colorNum = (int)(Random.value * 10) % 3;
-        if (colorNum == 0) aColor = antidoteColor.Green;
-        else if (colorNum == 1) aColor = antidoteColor.Brown;
-        else if (colorNum == 2) aColor = antidoteColor.Yellow;
+        if (colorNum == 0)
+        {
+            aColor = antidoteColor.Green;
+        }
+        else if (colorNum == 1)
+        {
+            aColor = antidoteColor.Brown;
+        }
+        else if (colorNum == 2)
+        {
+            aColor = antidoteColor.Yellow;
+        }
         transform.Find("Potion_bottle").GetComponent<MeshRenderer>().material = material[(int)aColor];
         ItemIcon = itemIconArray[(int)aColor];
         base.Start();
@@ -42,7 +51,9 @@ public class Antidote : Item
                 Owner.transform.GetComponent<SurvivorStatus>().CmdSetInfection(false);//해독
                 GameController.GetInstance().ActionMessage("Right", "맞는 해독제를 사용했습니다.", Owner);
                 if (Audio != null)
+                {
                     Audio.Play(owner, "Antidote");
+                }
                 Owner.GetComponent<SurvivorStatus>().CmdSpawnAntidoteEffect(this.gameObject, headPoint,Owner.transform.rotation);
             }
             else
@@ -51,6 +62,7 @@ public class Antidote : Item
             }
         }
     }
+
     public string getAntidoteColor()
     {
         return aColor.ToString();

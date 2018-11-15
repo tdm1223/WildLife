@@ -187,11 +187,6 @@ public class SurvivorRecogRangeCollider : NetworkBehaviour {
         SnakeRecogCollider.radius = value;
     }
 
-
-
-
-
-
     void ContorllRecogCollider()
     {
         if (Input.GetButtonDown("Run") || Input.GetButtonUp("Run") || Input.GetButtonDown("Sneek") || Input.GetButtonUp("Sneek"))

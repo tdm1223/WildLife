@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SprayCollider: MonoBehaviour {
-
+public class SprayCollider: MonoBehaviour
+{
     void OnTriggerEnter(Collider other)
     {
         //살충제 범위 안으로 벌이 들어오면 벌 제거

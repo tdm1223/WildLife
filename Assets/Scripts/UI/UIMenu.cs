@@ -9,7 +9,7 @@ using System;
 
 public class UIMenu : UIMain
 {
-    public GameObject helpPanel;
+    //public GameObject helpPanel;
     public GameObject gameOverPanel;
 
     void Start()
@@ -19,6 +19,17 @@ public class UIMenu : UIMain
         Cursor.visible = false;
     }
 
+    public override void BackButton(GameObject panel)
+    {
+        Audio.Play("Click");
+
+        panel.SetActive(false);
+        menuPanel.SetActive(true);
+        ToggleDisable(true);
+
+        //if (panel.name.Equals("OptionPanel"))
+        //    LobbyManager.s_Singleton.topPanel.gameObject.SetActive(true);
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -26,21 +37,15 @@ public class UIMenu : UIMain
             if (gameOverPanel.activeSelf) return;
             if (optionPanel.activeSelf) //옵션창이 켜져있다면 옵션창을 닫기
             {
-                optionPanel.SetActive(false);
-                menuPanel.SetActive(true);
-                ToggleDisable(true);
+                BackButton(optionPanel);
             }
             else if (howToPlayPanel.activeSelf)
             {
-                howToPlayPanel.SetActive(false);
-                menuPanel.SetActive(true);
-                ToggleDisable(true);
+                BackButton(howToPlayPanel);
             }
             else if (helpPanel.activeSelf)
             {
-                helpPanel.SetActive(false);
-                menuPanel.SetActive(true);
-                ToggleDisable(true);
+                BackButton(helpPanel);
             }
             else
             {
@@ -99,7 +104,6 @@ public class UIMenu : UIMain
     public void ResumeGame()
     {
         Audio.Play("Click");
-
         menuPanel.SetActive(false);
         GameObject.Find("LobbyManager/TopPanel").GetComponent<LobbyTopPanel>().ToggleVisibility(false);
         ToggleDisable(false);
@@ -125,15 +129,7 @@ public class UIMenu : UIMain
         ToggleDisable(true);
         menuPanel.SetActive(false);
         optionPanel.SetActive(true);
-        GameObject.Find("LobbyManager/TopPanel").GetComponent<LobbyTopPanel>().ToggleVisibility(false);
-    }
-
-    public override void BackButton(GameObject panel)
-    {
-        base.BackButton(panel);
-
-        if (panel.name.Equals("OptionPanel"))
-            LobbyManager.s_Singleton.topPanel.gameObject.SetActive(true);
+        //GameObject.Find("LobbyManager/TopPanel").GetComponent<LobbyTopPanel>().ToggleVisibility(false);
     }
 
     //게임 방법 버튼
@@ -145,6 +141,6 @@ public class UIMenu : UIMain
         ToggleDisable(true);
         menuPanel.SetActive(false);
         helpPanel.SetActive(true);
-        GameObject.Find("LobbyManager/TopPanel").GetComponent<LobbyTopPanel>().ToggleVisibility(false);
+        //GameObject.Find("LobbyManager/TopPanel").GetComponent<LobbyTopPanel>().ToggleVisibility(false);
     }
 }
