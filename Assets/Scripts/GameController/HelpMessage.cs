@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HelpMessage : MonoBehaviour {
-
+public class HelpMessage : MonoBehaviour
+{
     [SerializeField] protected HelpStruct[] HelpStructs;
 
     [System.Serializable]

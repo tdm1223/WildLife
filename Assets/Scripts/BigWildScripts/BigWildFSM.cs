@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class BigWildFSM : NetworkBehaviour
+public abstract class BigWildFSM : NetworkBehaviour
 {
     public enum State
     {
@@ -347,24 +347,8 @@ public class BigWildFSM : NetworkBehaviour
         }
     }
 
-    protected virtual void InSightRange()     //시야 범위 안 레이쏘기
-    {
-        rayPosition.x = transform.position.x;
-        rayPosition.y = transform.position.y + 1.35f;
-        rayPosition.z = transform.position.z;
-
-        Vector3 survivorPosition = SightRange.getSurvivors().transform.position - this.transform.position;
-
-        if (Physics.Raycast(rayPosition, survivorPosition, out rayHit, MAX_RAY_DISTANCE))
-        {
-            if (rayHit.collider.tag == "Player")
-            {
-                LookTarget = SightRange.getSurvivors().transform.gameObject;
-                state = State.Look;
-                LookTarget.GetComponent<SurvivorStatus>().SetBW(gameObject);
-            }
-        }
-    }
+    //시야 범위 안 레이 쏘기(Bear, Boar에서 각각 오버라이딩)
+    public abstract void InSightRange();
 
     //LookTarget과 ChaseTarget을 초기화 하는 함수
     public void InitTarget()

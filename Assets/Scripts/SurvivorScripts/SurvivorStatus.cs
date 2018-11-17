@@ -418,27 +418,20 @@ public class SurvivorStatus : NetworkBehaviour
     [Command]
     public void CmdSpawnSprayEffect(GameObject obj, Vector3 point, Quaternion q)
     {
-
         GameObject effect;
         effect = ((Transform)Instantiate(obj.GetComponent<Spray>().ParticleSystem, point, q)).gameObject;
-
         NetworkServer.Spawn(effect);
-        Debug.Log("스폰 이펙트");
         DestroyEffect(effect);
     }
 
-
-
     public void DestroyEffect(GameObject obj)
     {
-        Debug.Log("디스트로이 이펙트");
         StartCoroutine(DsetroyEffect(obj));
     }
 
     IEnumerator DsetroyEffect(GameObject obj)
     {
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("코루틴 디스트로이 이펙트");
         NetworkServer.Destroy(obj);
 
         //CmdDestroyObject(obj);

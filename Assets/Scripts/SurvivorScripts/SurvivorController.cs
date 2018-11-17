@@ -25,7 +25,7 @@ public class SurvivorController : NetworkBehaviour
     public float jumpSpeed;      //점프량
 
     bool Action;    //e키
-    bool Fire1;     //왼클릭
+    //bool Fire1;     //왼클릭
     bool Fire2;     //우클릭
     bool Sneak;     //좌 Ctrl키
     int ItemPos;    //활성화된 아이템 
@@ -106,7 +106,7 @@ public class SurvivorController : NetworkBehaviour
         recogRangeColliderGroup = transform.Find("RecogRangeColliderGroup").gameObject;
 
         Action = false;
-        Fire1 = false;
+        //Fire1 = false;
         Fire2 = false;
         Sneak = false;
 

@@ -413,4 +413,23 @@ public class Bear : BigWildFSM
             }
         }
     }
+
+    public override void InSightRange() //시야 범위 안 레이쏘기
+    {
+        rayPosition.x = transform.position.x;
+        rayPosition.y = transform.position.y + 1.35f;
+        rayPosition.z = transform.position.z;
+
+        Vector3 survivorPosition = SightRange.getSurvivors().transform.position - transform.position;
+
+        if (Physics.Raycast(rayPosition, survivorPosition, out rayHit, MAX_RAY_DISTANCE))
+        {
+            if (rayHit.collider.tag == "Player")
+            {
+                LookTarget = SightRange.getSurvivors().transform.gameObject;
+                state = State.Look;
+                LookTarget.GetComponent<SurvivorStatus>().SetBW(gameObject);
+            }
+        }
+    }
 }

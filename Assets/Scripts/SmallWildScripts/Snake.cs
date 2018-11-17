@@ -72,12 +72,20 @@ public class Snake : SmallWildFSM
 
     public override void Start()
     {
-        this.transform.rotation = new Quaternion(0,0,0,0);
+        transform.rotation = new Quaternion(0,0,0,0);
         colorNum = (int)(Random.value * 10) % 3;
-        if (colorNum == 0) color = snakeColor.Green;
-        else if (colorNum == 1) color = snakeColor.Brown;
-        else if (colorNum == 2) color = snakeColor.Yellow;
-        //transform.FindChild("Snake_Mesh").GetComponent<SkinnedMeshRenderer>().material = material[(int)color];
+        if (colorNum == 0)
+        {
+            color = snakeColor.Green;
+        }
+        else if (colorNum == 1)
+        {
+            color = snakeColor.Brown;
+        }
+        else if (colorNum == 2)
+        {
+            color = snakeColor.Yellow;
+        }
         skinnedMeshRenderer.material = material[(int)color];
         //기본상태로 비맹수급은 가만히 있는 idle
         state = State.Idle;
@@ -85,7 +93,7 @@ public class Snake : SmallWildFSM
 
         base.Start();
     }
-    //뱀은 똬리를 틀고있는 Idle
+    // 뱀은 똬리를 틀고있는 Idle
     // 경계안에 들어와있을때 몸을 세우고있는 Guard
     // 공격하는 Attack 상태밖에 없다.
     void FixedUpdate()
@@ -108,10 +116,13 @@ public class Snake : SmallWildFSM
         //벗어날때
         GoToNextState();
     }
+
     IEnumerator Guard()
     {
         if (Audio != null)
+        {
             Audio.Play("Guard");
+        }
 
         while (state == State.Guard)
         {
@@ -131,10 +142,13 @@ public class Snake : SmallWildFSM
         //벗어날때
         GoToNextState();
     }
+
     IEnumerator Attack()
     {
         if (Audio != null)
+        {
             Audio.Play("Attack");
+        }
 
         while (state == State.Attack)
         {

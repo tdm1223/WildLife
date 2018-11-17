@@ -277,51 +277,6 @@ public class GameController : NetworkBehaviour
         }
     }
 
-    //string HelpMessage(string objectName)
-    //{
-    //    string result;
-
-    //    string[] HungerMessge = { "달리면 배고픔이 빨리 감소합니다.", "배고픔에 항상 신경써야 합니다.", "음식을 먹으면 배고픔을 회복할 수 있습니다." };
-    //    string[] BearMessage = { "곰에게 등을 보이면 위험합니다.", "곰은 사람이 가졌던 아이템에 관심이 있습니다.", "곰은 음식에 민감합니다.", "곰은 큰 물체를 위협으로 인식합니다." };
-    //    string[] BeeMessage = { "벌에게서 도망치는 것은 위험합니다." };
-    //    string[] BoarMessage = { "멧돼지는 달리는 방향을 쉽게 바꾸지 못합니다.", "멧돼지는 큰 물체를 위협으로 인식합니다." };
-    //    string[] SnakeMessage = { "물린 뱀의 생김새를 기억해야 합니다.", "뱀에 맞는 해독제를 사용해야 합니다." };
-    //    string[] MushroomMessage = { "독버섯과 식용버섯을 겉모습으로 구분하기는 쉽지 않습니다." };
-
-    //    switch (objectName)
-    //    {
-    //        case "Hunger":
-    //            result = HungerMessge[Random.Range(0, HungerMessge.Length)];
-    //            break;
-
-    //        case "Bear":
-    //            result = BearMessage[Random.Range(0, BearMessage.Length)];
-    //            break;
-
-    //        case "Bee":
-    //            result = BeeMessage[Random.Range(0, BeeMessage.Length)];
-    //            break;
-
-    //        case "Boar":
-    //            result = BoarMessage[Random.Range(0, BoarMessage.Length)];
-    //            break;
-
-    //        case "Snake":
-    //            result = SnakeMessage[Random.Range(0, SnakeMessage.Length)];
-    //            break;
-
-    //        case "Mushroom":
-    //            result = MushroomMessage[Random.Range(0, MushroomMessage.Length)];
-    //            break;
-
-    //        default:
-    //            result = "죽은 원인 : " + objectName;
-    //            break;
-    //    }
-
-    //    return result;
-    //}
-
     void SendWriteStartingMessageTextMsg()
     {
         SendMsgManager.GetInstance().SendWriteMessgeMsg("최후의 1인으로 살아남으세요!");
@@ -351,11 +306,8 @@ public class GameController : NetworkBehaviour
         UICanvas.transform.Find("MessagePanel").GetComponent<Animator>().SetBool("FadeOut", false);
         MessageText.text = msg;
         MessageText.transform.parent.gameObject.SetActive(true);
-
         yield return new WaitForSeconds(5);
-
         UICanvas.transform.Find("MessagePanel").GetComponent<Animator>().SetBool("FadeOut", true);
-        //MessageText.transform.parent.gameObject.SetActive(false);
     }
 
     IEnumerator RightActionMessageCoroutine;
@@ -404,28 +356,20 @@ public class GameController : NetworkBehaviour
     IEnumerator ShowRightActionMessage(string message)
     {
         Audio.Play("Right");
-
-        //RightActionMessagePanel.SetActive(true);
         RightActionMessagePanel.GetComponent<Animator>().SetBool("SlideIn", true);
         RightActionMessagePanel.transform.Find("MessageText").GetComponent<Text>().text = message;
 
         yield return new WaitForSeconds(3);
-
-        //RightActionMessagePanel.SetActive(false);
         RightActionMessagePanel.GetComponent<Animator>().SetBool("SlideIn", false);
     }
 
     IEnumerator ShowWrongActionMessage (string message)
     {
         Audio.Play("Wrong");
-
-        //WrongActionMessagePanel.SetActive(true);
         WrongActionMessagePanel.GetComponent<Animator>().SetBool("SlideIn", true);
         WrongActionMessagePanel.transform.Find("MessageText").GetComponent<Text>().text = message;
 
         yield return new WaitForSeconds(3);
-
-        //WrongActionMessagePanel.SetActive(false);
         WrongActionMessagePanel.GetComponent<Animator>().SetBool("SlideIn", false);
     }
 

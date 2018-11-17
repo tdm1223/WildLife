@@ -54,7 +54,7 @@ public class Antidote : Item
                 {
                     Audio.Play(owner, "Antidote");
                 }
-                Owner.GetComponent<SurvivorStatus>().CmdSpawnAntidoteEffect(this.gameObject, headPoint,Owner.transform.rotation);
+                Owner.GetComponent<SurvivorStatus>().CmdSpawnAntidoteEffect(gameObject, headPoint,Owner.transform.rotation);
             }
             else
             {

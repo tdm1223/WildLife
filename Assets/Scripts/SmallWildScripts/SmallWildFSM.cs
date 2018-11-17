@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallWildFSM : MonoBehaviour {
-
-    protected enum State
+public class SmallWildFSM : MonoBehaviour
+{
+    public enum State
     {
         Idle,
         Chase,

@@ -273,11 +273,11 @@ public class Boar : BigWildFSM
         }
         else if (currentPosition != target.transform.position)
         {
-            //GameController.GetInstance().ActionMessage("Wrong", "움직였습니다.", target);
             ChaseTarget = target;
             state = State.Attack;
         }
     }
+
     IEnumerator ResetTarget(float timer, GameObject target)
     {
         yield return new WaitForSeconds(timer);
@@ -292,7 +292,7 @@ public class Boar : BigWildFSM
         if (LookTarget != null)
         {
             float angle = Quaternion.Angle(target.transform.rotation, transform.rotation);
-            if (angle < 80f || angle > 280f)
+            if (angle < 80.0f || angle > 280.0f)
             {
                 state = State.Chase;
                 ChaseTarget = LookTarget;
@@ -308,13 +308,15 @@ public class Boar : BigWildFSM
             }
         }
     }
-    protected override void InSightRange()
+
+    // 시야 범위 안 레이 쏘기
+    public override void InSightRange() 
     {
         rayPosition.x = transform.position.x;
         rayPosition.y = transform.position.y + 1.35f;
         rayPosition.z = transform.position.z;
 
-        Vector3 survivorPosition = SightRange.getSurvivors().transform.position - this.transform.position;
+        Vector3 survivorPosition = SightRange.getSurvivors().transform.position - transform.position;
 
         if (Physics.Raycast(rayPosition, survivorPosition, out rayHit, MAX_RAY_DISTANCE))
         {
