@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boar : BigWildFSM
 {
+
     [Header("멧돼지 변수")]
     [Tooltip("멧돼지 시야")]
     public float sightDistance = 20f;
@@ -72,7 +73,7 @@ public class Boar : BigWildFSM
                         StartCoroutine(ObstacleDistinction(obstacleDistinctionTimer, LookTarget));
                     }
                 }
-                else if (dist < 2f)
+                else if (dist < 2.0f)
                 {
                     state = State.Chase;
                     ChaseTarget = LookTarget;
@@ -89,7 +90,6 @@ public class Boar : BigWildFSM
                 {
                     aiPath.speed = walkSpeed - 1.5f;
                 }
-
 
                 //시야범위 안에 또 다른 타겟이 왔을때 더 가까우면 교환
                 if (SightRange.getSurvivors() != null)

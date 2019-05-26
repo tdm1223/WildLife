@@ -127,6 +127,7 @@ public class Bear : BigWildFSM
         }
         GoToNextState();
     }
+
     IEnumerator Chase()
     {
         if (Audio != null)
@@ -210,6 +211,7 @@ public class Bear : BigWildFSM
         }
         GoToNextState();
     }
+
     IEnumerator Attack()
     {
         while (state == State.Attack)
