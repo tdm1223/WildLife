@@ -13,7 +13,7 @@ public abstract class BigWildFSM : NetworkBehaviour
         Look,
         Chase,
         Attack,
-        Attention
+        Attention,
     }
 
     [Header("야생동물 변수")]
@@ -55,8 +55,7 @@ public abstract class BigWildFSM : NetworkBehaviour
 
     Bounds spawnBounds;
     float MinX, MaxX, MinZ, MaxZ;
-    const float minDistance = 2.0f;
-    const float maxDistance = 40.0f;
+
     public void Awake()
     {
         //기본상태로 야생동물이 맵 전체를 무작위로 돌아다니는 Patrol
@@ -68,7 +67,7 @@ public abstract class BigWildFSM : NetworkBehaviour
 
         detect = new GameObject();
         detect.name = "DetectPoint";
-        
+
         wayPoint = new GameObject();
         wayPoint.name = "WayPoint";
 
@@ -172,7 +171,7 @@ public abstract class BigWildFSM : NetworkBehaviour
             aiPath.target = SetDetectPoint(detect);
             //탐지된곳까지 이동하였다가 아무일도 일어나지않거나 탐지되는 소리가 없어진다면 잠시 머물다가 다시 이동
             float dist = Vector3.Distance(aiPath.target.position, transform.position);
-            if (dist < minDistance || dist > maxDistance)
+            if (dist <= 2.0f || dist > 40.0f)
             {
                 state = State.Idle;
             }
@@ -201,7 +200,7 @@ public abstract class BigWildFSM : NetworkBehaviour
         float PosX = Random.Range(MinX, MaxX);
         float PosZ = Random.Range(MinZ, MaxZ);
 
-        point.transform.position = new Vector3(PosX, 50.0f, PosZ);
+        point.transform.position = new Vector3(PosX, 50, PosZ);
 
         if (Physics.Raycast(point.transform.position, Vector3.down, out rayHit, 100))
         {         
@@ -234,13 +233,12 @@ public abstract class BigWildFSM : NetworkBehaviour
     // 상태를 바꾸는 함수
     protected void GoToNextState()
     {
-        //// 호출하기 원하는 함수의 이름
-        //string methodName = state.ToString();
+        // 호출하기 원하는 함수의 이름
+        string methodName = state.ToString();
 
-        //// 클래스에서 해당 상태의 함수를 검색
-        //System.Reflection.MethodInfo info = GetType().GetMethod(methodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        //StartCoroutine((IEnumerator)info.Invoke(this, null));
-        StartCoroutine(state.ToString());
+        // 클래스에서 해당 상태의 함수를 검색
+        System.Reflection.MethodInfo info = GetType().GetMethod(methodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        StartCoroutine((IEnumerator)info.Invoke(this, null));
     }
 
     //데미지 입히는 함수

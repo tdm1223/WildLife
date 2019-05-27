@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectRangeCollider : MonoBehaviour
-{
+public class DetectRangeCollider : MonoBehaviour {
     bool isDetect = false;
     public int targetObjectID = 0;
     Vector3 playerPosition;

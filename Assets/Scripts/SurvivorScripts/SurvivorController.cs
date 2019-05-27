@@ -24,6 +24,7 @@ public class SurvivorController : NetworkBehaviour
     public float sneakSpeed;     //기는 속도
     public float jumpSpeed;      //점프량
 
+    bool Action;    //e키
     //bool Fire1;     //왼클릭
     bool Fire2;     //우클릭
     bool Sneak;     //좌 Ctrl키
@@ -33,6 +34,7 @@ public class SurvivorController : NetworkBehaviour
     private Vector3 ScreenMidPoint;
     private SurvivorInventory Inventory;
     private Item UsingItem = null; //현재 들고있는 아이템
+    private GameObject ragDoll;     //레그돌
     public GameObject EquipPoint;//이것은 자신의 아이템 equippoint 를 저장한다. 
 
     //동물관련 recogcollider
@@ -40,6 +42,7 @@ public class SurvivorController : NetworkBehaviour
     private GameObject beeCollider;
     private GameObject boarCollider;
     private GameObject snakeCollider;
+    private GameObject recogRangeColliderGroup;
 
     private bool umbrellaState;
     private bool waterCheck = false;
@@ -93,14 +96,16 @@ public class SurvivorController : NetworkBehaviour
         playerAnimator = this.gameObject.GetComponent<Animator>();
         Inventory = GetComponent<SurvivorInventory>();
         survivorAudio = GetComponent<SurvivorAudio>();
+        ragDoll = GameObject.Find("/Survivor/Bip001/Bip001 Pelvis");    //레그돌
         ScreenMidPoint = new Vector3(Screen.width / 2, Screen.height / 2, 0f);
 
         BearCollider = transform.Find("RecogRangeColliderGroup").Find("BearRecogRangeCollider").gameObject;
         BeeCollider = transform.Find("RecogRangeColliderGroup").Find("BeeRecogRangeCollider").gameObject;
         BoarCollider = transform.Find("RecogRangeColliderGroup").Find("BoarRecogRangeCollider").gameObject;
         SnakeCollider = transform.Find("RecogRangeColliderGroup").Find("SnakeRecogRangeCollider").gameObject;
+        recogRangeColliderGroup = transform.Find("RecogRangeColliderGroup").gameObject;
 
-        //Action = false;
+        Action = false;
         //Fire1 = false;
         Fire2 = false;
         Sneak = false;
@@ -217,12 +222,16 @@ public class SurvivorController : NetworkBehaviour
             uiLookingItemText.SendMessage("UpdateLookingItemText", hit.transform.gameObject.GetComponent<Item>(), SendMessageOptions.DontRequireReceiver);  //아이템 이름 표시 UI
             if (Input.GetButtonDown("Action"))
             {
+                Action = true;
+
                 if (hit.transform.tag.Equals("Item"))
                 {
                     playerAnimator.Play("PickUp");          //픽업 애니메이션 실행
                     hit.transform.gameObject.SendMessage("GetItem", this, SendMessageOptions.DontRequireReceiver);  //아이템을 에임에 대고 Action 버튼을 누르면 SendMessage
                 }
             }
+            else
+                Action = false;
         }
         else
             uiLookingItemText.SendMessage("UnableLookingItemText", null, SendMessageOptions.DontRequireReceiver);   //아이템 이름 표시 UI 없애기
