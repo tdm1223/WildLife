@@ -70,16 +70,6 @@ public class GameController : NetworkBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown("k"))
-            ActionMessage("Right", "곰은 생존자의 아이템에 관심을 보입니다.", survivors[0]);
-        if (Input.GetKeyDown("l"))
-            ActionMessage("Wrong", "곰에게 등을 보였습니다.", survivors[0]);
-        if(Input.GetKeyDown(";"))
-            WriteMessageText("최대한 오래 살아남으세요!");
-    }
-
     public void GameControllerInit()
     {
         GameObject[] survivorObject = GameObject.FindGameObjectsWithTag("Player");
