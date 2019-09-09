@@ -36,20 +36,10 @@ public class SurvivorController : NetworkBehaviour
     private Item UsingItem = null; //현재 들고있는 아이템
     private GameObject ragDoll;     //레그돌
     public GameObject EquipPoint;//이것은 자신의 아이템 equippoint 를 저장한다. 
-
-    //동물관련 recogcollider
-    private GameObject bearCollider;
-    private GameObject beeCollider;
-    private GameObject boarCollider;
-    private GameObject snakeCollider;
     private GameObject recogRangeColliderGroup;
 
     private bool umbrellaState;
     private bool waterCheck = false;
-    //[SyncVar]
-    //public bool garlicFlag;
-    //[SyncVar]
-    //public bool bellFlag;
 
     void OnTriggerEnter(Collider other)
     {
@@ -76,14 +66,12 @@ public class SurvivorController : NetworkBehaviour
             if (UsingItem != null) //기존의 착용하고 있던 아이템 분리 
             {
                 SendMsgManager.GetInstance().UnEquipItem(UsingItem.gameObject);
-                //UsingItem.UnHold();
             }
 
             UsingItem = Inventory.getItem(UsingItemPos);
 
             SendMsgManager.GetInstance().UnEquipItem(UsingItem.gameObject);
             SendMsgManager.GetInstance().EquipItem(UsingItem.gameObject);
-            //UsingItem.Hold();
             Inventory.uiInventory.SendMessage("SelectItem", pos, SendMessageOptions.DontRequireReceiver);
         }
     }
@@ -296,19 +284,14 @@ public class SurvivorController : NetworkBehaviour
                     }
 
                     Inventory.ThrowItem(UsingItemPos);
-                    //UsingItem.UnHold();
 
                     if (survivorStatus.bigWild != null && survivorStatus.bigWild.tag == "Bear")      //보이거나 추격당할때 아이템 버리면 곰에게 관심끌게하기
                     {
                         StartCoroutine(WaitThrowItem());
-                        //bigWild.GetComponent<Bear>().SendMessage("AttentionItem", Inventory.GetThrowItem(), SendMessageOptions.DontRequireReceiver);
                     }
 
                     if (UsingItem.useCount < 1)
                     {
-                        //UsingItem.UnHold();
-                        //UsingItem.useCount = 1;//다시 초기화 시켜줌
-                        //Inventory.RemoveItem(UsingItemPos);
                         UsingItem = null;
                     }
                     else
@@ -381,50 +364,10 @@ public class SurvivorController : NetworkBehaviour
         return controller.velocity.magnitude;
     }
 
-    public GameObject BearCollider
-    {
-        get
-        {
-            return bearCollider;
-        }
-        set
-        {
-            bearCollider = value;
-        }
-    }
-    public GameObject BeeCollider
-    {
-        get
-        {
-            return beeCollider;
-        }
-        set
-        {
-            beeCollider = value;
-        }
-    }
-    public GameObject BoarCollider
-    {
-        get
-        {
-            return boarCollider;
-        }
-        set
-        {
-            boarCollider = value;
-        }
-    }
-    public GameObject SnakeCollider
-    {
-        get
-        {
-            return snakeCollider;
-        }
-        set
-        {
-            snakeCollider = value;
-        }
-    }
+    public GameObject BearCollider { get; set; }
+    public GameObject BeeCollider { get; set; }
+    public GameObject BoarCollider { get; set; }
+    public GameObject SnakeCollider { get; set; }
     public bool WaterCheck
     {
         get

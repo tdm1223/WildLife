@@ -51,7 +51,6 @@ public abstract class BigWildFSM : NetworkBehaviour
     protected float nextAttack = 0.0f;
 
     bool patrolFlag = false;
-    bool detectFlag = false;
 
     Bounds spawnBounds;
     float MinX, MaxX, MinZ, MaxZ;
